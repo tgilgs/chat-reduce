@@ -1,0 +1,4 @@
+flask
+venv
+tmp
+app/__pycache__
