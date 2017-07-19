@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content="5; url={{ url_for('main') }}" />
+</head>
+<body>
+
+<h1>You are now authorised!</h1>
+<p>This page will redirect to the main site within 5 seconds</p>
+<p><a href="{{ url_for('main') }}">Otherwise, click here for redirect</a></p>
+
+
+</body>
+</html>
