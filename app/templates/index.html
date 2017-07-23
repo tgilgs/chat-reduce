@@ -5,11 +5,30 @@
     {% for post in posts %}
     <div><p>{{ post.author.nickname }} says: <b>{{ post.body }}</b></p></div>
     {% endfor %}
+    <div>
+        <div style="width: 45%; float:left">
+            <p> Word cloud 1 from {{ imga }}</p>
+            <img src="{{  imga  }}" class="img-responsive" alt="wordcloud1" width="600" height="400" vspace="30">
+        </div>
 
-    <p> Generated Word cloud from {{ imga }}</p>
-    <img src="{{  imga  }}" class="img-responsive" alt="wordcloud1" width="1280" height="720">
-    <p> Generated Word cloud from {{ imgb }}</p>
-    <img src="{{  imgb  }}" class="img-responsive" alt="wordcloud2" width="1280" height="720">
+        <div style="width: 45%; float:right">
+            <p> Word cloud 2 from {{ imgb }}</p>
+            <img src="{{  imgb  }}" class="img-responsive" alt="wordcloud2" width="600" height="400" vspace="30">
+        </div>
+    </div>
+
+    <div>
+        <div style="width: 45%; float:left">
+            <p> Word cloud 3 from {{ imgc }}</p>
+            <img src="{{  imgc  }}" class="img-responsive" alt="wordcloud3" width="600" height="400" vspace="30">
+        </div>
+
+        <div style="width: 45%; float:right">
+            <p> Word cloud 4 from {{ imgd }}</p>
+            <img src="{{  imgd  }}" class="img-responsive" alt="wordcloud4" width="600" height="400" vspace="30">
+        </div>
+    </div>
+
 
 
     <!--<h2>Image</h2>

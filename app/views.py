@@ -56,8 +56,11 @@ def generate_wordcloud(outputImgPath, imgDimensions, inputTextPath):
 	filepath = open(inputTextPath).read()
 	
 	wordcloud = wc.WordCloud(font_path = '/System/Library/Fonts/HelveticaNeue.dfont', 
-		height = 800, width = 1600, background_color='white', 
-		max_font_size=180, font_step=1, max_words=40, relative_scaling=0.3)
+		height = 400, width = 600, margin=2, background_color='white', 
+		ranks_only=None, prefer_horizontal=.9, mask=None, scale=1, color_func=None,
+		max_font_size=180, min_font_size=4, font_step=2, max_words=40, relative_scaling=0.3,
+		regexp=None, collocations=True, random_state=None, mode="RGB",
+		colormap=None, normalize_plurals=True)
 	wordcloud.generate(filepath)
 	image = wordcloud.to_image()
 
@@ -72,16 +75,21 @@ def generate_wordcloud(outputImgPath, imgDimensions, inputTextPath):
 @app.route('/')
 @app.route('/index')
 def index():
+
     user = {'nickname': 'Tom'}
     
     path = generate_wordcloud('app/static/img/wordcloudimage.png', 'test', 'app/static/files/a_new_hope.txt')
     path2 = generate_wordcloud('app/static/img/wordcloudimage2.png', 'test', 'app/static/files/constitution.txt')
+    path3 = generate_wordcloud('app/static/img/wordcloudimage3.png', 'test', 'app/static/files/constitution.txt')
+    path4 = generate_wordcloud('app/static/img/wordcloudimage4.png', 'test', 'app/static/files/a_new_hope.txt')
 
     return render_template('index.html',
             title='Home',
             user=user,
             imga=path,
-            imgb=path2)
+            imgb=path2,
+            imgc=path3,
+            imgd=path4)
 
 
 
