@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="refresh" content="5; url={{ url_for('main') }}" />
+  <meta charset="UTF-8">
+  <title>Redirect to recap</title>
+
+  <meta http-equiv="refresh" content="2; url={{ url_for('main') }}" />
+
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='authorise.css') }}">
 </head>
+
 <body>
 
-<h1>You are now authorised!</h1>
-<p>This page will redirect to the main site within 5 seconds</p>
-<p><a href="{{ url_for('main') }}">Otherwise, click here for redirect</a></p>
+  <p class="wrapper">
+    <span class="first_letter">
+      <span class="letter1">r</span>
+      <span class="letter1_bg"></span>
+    </span>
+    <span class="second_letter">
+      <span class="letter2">e</span>
+      <span class="letter2_bg"></span>
+    </span>
+    <span class="third_letter">
+      <span class="letter3">c</span>
+      <span class="letter3_bg"></span>
+    </span>
+    <span class="fourth_letter">
+      <span class="letter4">a</span>
+      <span class="letter4_bg"></span>
+    </span>
+    <span class="fifth_letter">
+      <span class="letter5">p</span>
+      <span class="letter5_bg"></span>
+    </span>
+  </p>
 
+  <p class ="redirect" style="text-align:center"><a href="{{ url_for('main') }}">Click here for redirect</a></p>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+
+    <script src="../static/authorise.js"></script>
 
 </body>
 </html>
