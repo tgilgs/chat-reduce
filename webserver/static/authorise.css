@@ -1,0 +1,69 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  color: #353535;
+  position: relative;
+}
+
+.wrapper {
+  display: inline-block;
+  font-size: 16vmin;
+}
+
+.first_letter, .second_letter, .third_letter, .fourth_letter, .fifth_letter {
+  position: relative;
+}
+
+.letter1, .letter2, .letter3, .letter4, .letter5, .redirect {
+  opacity: 0;
+}
+
+.letter1_bg, .letter2_bg, .letter3_bg, .letter4_bg, .letter5_bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.letter1_bg {
+  background-color: #D2D2D2;
+}
+
+.letter2_bg {
+  background-color: #A8DFF4;
+}
+
+.letter3_bg {
+  background-color: #0A9AD7;
+}
+
+.letter4_bg {
+  background-color: #73BE47;
+}
+
+.letter5_bg {
+  background-color: #353535;
+}
+
+.redirect {
+  position: absolute;
+  font-size: 14px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto 2%;
+  cursor: pointer;
+  color: grey;
+}
