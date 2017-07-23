@@ -24,7 +24,7 @@ def getAccessToken(code):
     return accessData.json()
 
 # Required Data: - Access Token
-# Output: - An array of all rooms
+# Output: - A dictionary containing the room names and their corresponding id
 def listRooms():
     url = "https://api.ciscospark.com/v1/rooms"
     headers = {
@@ -33,9 +33,10 @@ def listRooms():
     }
     roomData = (requests.get(url, headers=headers)).json()
 
-    rooms = []
-    rooms.append([item["title"] for item in roomData["items"]])
-    return rooms
+    roomDict = {}
+    for item in roomData["items"]:
+        roomDict[item["title"]] = item["id"]
+    return roomDict
 
 # Required Parameters: - Access Token
 # Output: - A JSON object containing the user's Cisco Spark details
@@ -48,10 +49,18 @@ def getUserProfile():
     userDetails = requests.get(url, headers=headers)
     return userDetails.json()
 
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('index'))
+
 # 'Main' page with a list of all the rooms the user is part of
 @app.route('/main')
 def main():
-    rooms = listRooms()
+
+
+    # rooms = roomDict.keys()
+    # roomDict.get(<room name>, <default value>)
 
     # with open('roomList.txt', 'w') as f:
     #     for room in rooms:
@@ -60,10 +69,15 @@ def main():
     # with open('rooms.txt', 'w') as f:
     #         json.dump(rooms,f, ensure_ascii = False)
 
-    userDetails = getUserProfile()
-    session['displayName'] = userDetails['displayName']
+    displayName = session.get("displayName", False)
+    if not displayName:
+        return redirect(url_for('index'), code=302)
 
-    return render_template("main.html", key = session['displayName'])
+    rooms = listRooms()
+
+    return render_template("main.html", key = displayName)
+
+
 
 # 'Authorised' page which redirects the user if the login was valid
 @app.route('/oauth')
@@ -72,6 +86,9 @@ def oauth():
 
     data = getAccessToken(code)
     session['access_token'] = data['access_token']
+
+    userDetails = getUserProfile()
+    session['displayName'] = userDetails['displayName']
 
     return render_template("authorise.html")
 
@@ -89,7 +106,8 @@ def authorise():
 
 @app.route('/')
 def index():
-    return render_template('hello.html')
+    session.clear()
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080)
