@@ -12,6 +12,10 @@ body {
   position: relative;
 }
 
+.no-script {
+  text-align: center;
+}
+
 .wrapper {
   display: inline-block;
   font-size: 16vmin;
