@@ -2,16 +2,26 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Redirect to recap</title>
+  <title>Redirecting...</title>
 
-  <meta http-equiv="refresh" content="2; url={{ url_for('main') }}" />
+  <meta http-equiv="refresh" content="4; url={{ url_for('main') }}" />
 
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='authorise.css') }}">
+
 </head>
 
 <body>
+
+  <noscript>
+    <div class="no-script"><a href="{{ url_for('main') }}">Redirect</a></div>
+
+
+    <style type="text/css">
+		  .wrapper { display:none; }
+    </style>
+  </noscript>
 
   <p class="wrapper">
     <span class="first_letter">
@@ -34,13 +44,14 @@
       <span class="letter5">p</span>
       <span class="letter5_bg"></span>
     </span>
+
   </p>
 
   <p class ="redirect" style="text-align:center"><a href="{{ url_for('main') }}">Click here for redirect</a></p>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
 
-    <script src="../static/authorise.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='authorise.js') }}"></script>
 
 </body>
 </html>
