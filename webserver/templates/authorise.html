@@ -9,11 +9,8 @@
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='authorise.css') }}">
   <!-- <link rel=stylesheet type=text/css href="../static/authorise.css"> -->
 
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
-
-    <script type="text/javascript" src="{{ url_for('static', filename='authorise.js') }}"></script>
-    <!-- <script type="text/javascript" src="../static/authorise.js"></script> -->
+<meta http-equiv="refresh" content="3; url={{ url_for('main') }}" />
+  
 
 </head>
 
@@ -53,6 +50,11 @@
 
   <p class ="redirect" style="text-align:center"><a href="{{ url_for('main') }}">Click here for redirect</a></p>
   <!-- <p class ="redirect" style="text-align:center"><a href="../templates/main.html">Click here for redirect</a></p> -->
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='authorise.js') }}"></script>
+    <!-- <script type="text/javascript" src="../static/authorise.js"></script> -->
 
 </body>
 </html>

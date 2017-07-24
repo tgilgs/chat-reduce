@@ -1,9 +1,3 @@
-// Redirect to main page after a certain number of seconds
-setTimeout(function() {
-  window.location.href = "{{ url_for('main') }}";
-  // window.location.href = "../templates/main.html";
-}, 3300);
-
 // Letter reveal for the app name using GSAP Tween Lite
 window.onload = function(){
   var tl = new TimelineLite({delay: 1}),
