@@ -1,8 +1,50 @@
 <!DOCTYPE html>
 <html>
-<body>
+<head>
+  <meta charset="UTF-8">
+  <title>Recap</title>
 
-<h1>Welcome to The index Page of the Integration!</h1>
-<a href="{{ url_for('authorise') }}">Click to Authorise</a>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+  <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='index.css') }}"> -->
+  <link rel=stylesheet type=text/css href="../static/index.css">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="tab">
+        <a class="tablinks" href="{{ url_for('authorise') }}">Sign In</a>
+        <button class="tablinks" onclick="showTab(event, 'Contact')">Contact</button>
+        <button class="tablinks" onclick="showTab(event, 'Info')">Info</button>
+        <button class="tablinks" onclick="showTab(event, 'Home')" id="defaultOpen">Home</button>
+      </div>
+    </div>
+
+
+    <div id="Home" class="tabcontent">
+      <p>Home</p>
+    </div>
+
+    <div id="Info" class="tabcontent">
+      <div id="infoTxt">
+        <div id="recapImg">
+          <img src="../static/recapbot.jpg" alt="recapbot Logo" align="left">
+        </div>
+        <p>Inspired by 'recapbot' created during the London TechCrunch Disrupt hackathon</p>
+      </div>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+      <p>Contact</p>
+    </div>
+  </div>
+
+
+
+  <script type="text/javascript" src="../static/index.js"></script>
+
 </body>
 </html>
+
