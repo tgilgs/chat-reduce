@@ -1,0 +1,545 @@
+{
+    "items": [
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZGFmNTMwMDAtYjk3Ni0xMWU2LWFhNTQtNGJhM2Y4ZDVmNDA2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "Guys? Electrohydrodynamic jetting should refer to both electrospinning and electrospraying right?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T16:38:01.216Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvNTRkMDgxZTAtYjk3Mi0xMWU2LWI2NTUtNDkwYTNkZmRhNDA3",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "yes. does anybody know what's the material we used for electrospinning? it was something like cellulose but not quiet",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T16:37:38.174Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMzhkZDM0MTAtYjk3Mi0xMWU2LTlkMTktZjlhZjljOTA2NWI5",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "spinning or spraying?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9jYWMwNzgwZi03MDM4LTQ5MDctOGU4ZC0zMzdlZjczMGE3ODU",
+            "personEmail": "ahyc@tuta.io",
+            "created": "2016-12-03T16:35:51.281Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMmYyMGQ1MzAtYjk3Mi0xMWU2LWFhNTQtNGJhM2Y4ZDVmNDA2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "if you mean spraying, then it's  Ethyl cellulose polymer in ethanol and water solvent",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T16:35:34.947Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMjk4OTQwZDAtYjk3Mi0xMWU2LWEwNTAtMjMwY2RlZmJiYTBk",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "we used the same material for both right?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T16:30:25.565Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMjYxNWVjMDAtYjk3Mi0xMWU2LTkxYmEtNGJjYzIxYjUxZmNk",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "we didn't use spinning today! She just showed us the spraying",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9jYWMwNzgwZi03MDM4LTQ5MDctOGU4ZC0zMzdlZjczMGE3ODU",
+            "personEmail": "ahyc@tuta.io",
+            "created": "2016-12-03T16:29:19.776Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMjIzOGZmZjAtYjk3Mi0xMWU2LTgzMDQtODFjNzM4Y2NjMWU2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "Oh wait did you mean the pressurized gyration?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWM3NTk2Mi1hN2FhLTQ3OGItYmE4Yy02OTNlYTVjNTE2ZDU",
+            "personEmail": "aydan253@hotmail.co.uk",
+            "created": "2016-12-03T16:29:13.295Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMjE0MDQ4MTAtYjk3Mi0xMWU2LWI2NTUtNDkwYTNkZmRhNDA3",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "no, no I mean spraying",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9jYWMwNzgwZi03MDM4LTQ5MDctOGU4ZC0zMzdlZjczMGE3ODU",
+            "personEmail": "ahyc@tuta.io",
+            "created": "2016-12-03T16:29:11.665Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMWRlZDczOTAtYjk3Mi0xMWU2LTg3NmItM2IwNjUzNWNkY2Q1",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "Hm, then that's it, you did spinning as well?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9jYWMwNzgwZi03MDM4LTQ5MDctOGU4ZC0zMzdlZjczMGE3ODU",
+            "personEmail": "ahyc@tuta.io",
+            "created": "2016-12-03T16:28:06.089Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMWJkNTFhZTAtYjk3Mi0xMWU2LWI3OTktZWRhOGM0ZWE1YzQ3",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "it's almost the same, we didn't get fibers either, just longish particles and she called that electrospinning haha",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9jYWMwNzgwZi03MDM4LTQ5MDctOGU4ZC0zMzdlZjczMGE3ODU",
+            "personEmail": "ahyc@tuta.io",
+            "created": "2016-12-03T16:28:02.574Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMTE2MTA0YzAtYjk3Mi0xMWU2LWE4MzgtOGI1YTI5NTY1YWQ4",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "Oh... but still using the spraying machine right? So... can we call it spinning?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yZThhNjZhMS1iOWViLTRhYTQtYTQxMi1iMDVhYzYxYTBhZDk",
+            "personEmail": "jaymjplumb@gmail.com",
+            "created": "2016-12-03T16:27:45.036Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMGZiOTIxMjAtYjk3Mi0xMWU2LTg5N2QtZmRhYjVmM2Y2YzRj",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "from what i understand is the same machine, if you have lower voltage you get particles, if you increase it you get fibers",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yZThhNjZhMS1iOWViLTRhYTQtYTQxMi1iMDVhYzYxYTBhZDk",
+            "personEmail": "jaymjplumb@gmail.com",
+            "created": "2016-12-03T16:26:42.258Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZjljYzJmMTAtYjk3MS0xMWU2LWFhNTQtNGJhM2Y4ZDVmNDA2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "but if your voltage is too high you'l get atomisation",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T16:26:05.473Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZTlhZjk0YTAtYjk3MS0xMWU2LWEzZDEtODNhOWFiMjhhOTUy",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "Then shouldn't it  then form fibers on the collector?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWM3NTk2Mi1hN2FhLTQ3OGItYmE4Yy02OTNlYTVjNTE2ZDU",
+            "personEmail": "aydan253@hotmail.co.uk",
+            "created": "2016-12-03T16:25:38.442Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZDI2MjI4MzAtYjk3MS0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "if it atomises you'll get droplets like the asthma pump thing. no fibres. to get fibres is quite difficult you need to have the right viscosity and voltage. and conductivity and blah blah blah i haven;t done this lab so i actually don't know what you guy are talking about",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9jYWMwNzgwZi03MDM4LTQ5MDctOGU4ZC0zMzdlZjczMGE3ODU",
+            "personEmail": "ahyc@tuta.io",
+            "created": "2016-12-03T16:24:59.347Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvY2M0NWFjNjAtYjk3MS0xMWU2LTg3NmItM2IwNjUzNWNkY2Q1",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "Hm，so as the voltage rises， it forms particles， then fibers then atomisation gradually? If I could set all the parameters right",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWM3NTk2Mi1hN2FhLTQ3OGItYmE4Yy02OTNlYTVjNTE2ZDU",
+            "personEmail": "aydan253@hotmail.co.uk",
+            "created": "2016-12-03T16:23:49.094Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYzljZmNhNjAtYjk3MS0xMWU2LWEwNTAtMjMwY2RlZmJiYTBk",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "yeah",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWM3NTk2Mi1hN2FhLTQ3OGItYmE4Yy02OTNlYTVjNTE2ZDU",
+            "personEmail": "aydan253@hotmail.co.uk",
+            "created": "2016-12-03T16:23:44.966Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYzEwZjMwYTAtYjk3MS0xMWU2LTg5N2QtZmRhYjVmM2Y2YzRj",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "the thing is, in the practice we only changed the voltage, the other parameters remained constant. So what i said about the voltage only applies for our case",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWM3NTk2Mi1hN2FhLTQ3OGItYmE4Yy02OTNlYTVjNTE2ZDU",
+            "personEmail": "aydan253@hotmail.co.uk",
+            "created": "2016-12-03T16:22:30.282Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYjAyZWQxMDAtYjk3MS0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "how high did you guys go with voltage?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWM3NTk2Mi1hN2FhLTQ3OGItYmE4Yy02OTNlYTVjNTE2ZDU",
+            "personEmail": "aydan253@hotmail.co.uk",
+            "created": "2016-12-03T16:22:01.968Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYTc5YTAyMzAtYjk3MS0xMWU2LTkxNTktN2Q4NWUzOWFjYTc0",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "only 10 and 20 KV",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T16:21:47.571Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvOWZjODM1NDAtYjk3MS0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "15kV for my group",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9jYWMwNzgwZi03MDM4LTQ5MDctOGU4ZC0zMzdlZjczMGE3ODU",
+            "personEmail": "ahyc@tuta.io",
+            "created": "2016-12-03T16:20:34.452Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvOWExN2U4YzAtYjk3MS0xMWU2LWEzZDEtODNhOWFiMjhhOTUy",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "yeah that will just give you very fine fibres. you guys didn't do elctrospraying. i don't think",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9jYWMwNzgwZi03MDM4LTQ5MDctOGU4ZC0zMzdlZjczMGE3ODU",
+            "personEmail": "ahyc@tuta.io",
+            "created": "2016-12-03T16:19:24.908Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvOTQ0ZWU0MjAtYjk3MS0xMWU2LTgxN2YtYWI5MmE0OTM5MmEz",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "But what we get are particles...",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9jYWMwNzgwZi03MDM4LTQ5MDctOGU4ZC0zMzdlZjczMGE3ODU",
+            "personEmail": "ahyc@tuta.io",
+            "created": "2016-12-03T16:18:15.202Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvOGNiZGYwYzAtYjk3MS0xMWU2LWE5MGYtMWQyMjZkOWYzZTY1",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "it depends also in the concentration of the solution",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T16:18:02.508Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvNzRjN2U4NDAtYjk3MS0xMWU2LTlkMTktZjlhZjljOTA2NWI5",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "i.e. the viscosity",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9jYWMwNzgwZi03MDM4LTQ5MDctOGU4ZC0zMzdlZjczMGE3ODU",
+            "personEmail": "ahyc@tuta.io",
+            "created": "2016-12-03T16:17:22.308Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvNmZiOWY2NDAtYjk3MS0xMWU2LWI3OTktZWRhOGM0ZWE1YzQ3",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "surface tension and blah blah",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T16:16:13.828Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvNmMwYzA5NzAtYjk3MS0xMWU2LWFhNTQtNGJhM2Y4ZDVmNDA2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "yeah, maxwell stresses",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T16:13:07.655Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvNjE1OTNjYTAtYjk3MS0xMWU2LWEwNTAtMjMwY2RlZmJiYTBk",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "Has anyone done the biomech cwk? and if so what does the graph look like for cartilage and bone. cos the girl produced the same results and said there was something wrong that day",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T16:58:49.706Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvM2EzMzZhYjAtYjk3MS0xMWU2LTgxN2YtYWI5MmE0OTM5MmEz",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "I've just put them in mine and concluded both samples were cartilage and a bone sample was missing. Because that is what happened",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T15:57:44.027Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMjlkM2QzZDAtYjk3MS0xMWU2LTgxN2YtYWI5MmE0OTM5MmEz",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "yeah it was a bit silly, cos she said this is a bit hard so it must be bone",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9jYWMwNzgwZi03MDM4LTQ5MDctOGU4ZC0zMzdlZjczMGE3ODU",
+            "personEmail": "ahyc@tuta.io",
+            "created": "2016-12-03T15:57:16.557Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMjJhNGQ2OTAtYjk3MS0xMWU2LWEzZDEtODNhOWFiMjhhOTUy",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "You can put in a reference I guess for the bone graph but the idea of it all was just to familiarise us with the techniques I guessed",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T15:57:04.505Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMWJhYTU2ZDAtYjk3MS0xMWU2LTg5N2QtZmRhYjVmM2Y2YzRj",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "Has anyone started the business report?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T15:56:52.797Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMGQ2YzhlODAtYjk3MS0xMWU2LWI3OTktZWRhOGM0ZWE1YzQ3",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "I don't have a clue where to start lol",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T15:56:28.904Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZGMxZDZiMTAtYjk3MC0xMWU2LTkxNTktN2Q4NWUzOWFjYTc0",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "We not sure if  the report is based on company and how to go about opening company or if it's based on device itself",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9jYWMwNzgwZi03MDM4LTQ5MDctOGU4ZC0zMzdlZjczMGE3ODU",
+            "personEmail": "ahyc@tuta.io",
+            "created": "2016-12-03T15:55:06.177Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvY2U4OGI0MDAtYjk3MC0xMWU2LTg3NmItM2IwNjUzNWNkY2Q1",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "I think device itself. If it is patentable, technically doable, bla bla",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9jYWMwNzgwZi03MDM4LTQ5MDctOGU4ZC0zMzdlZjczMGE3ODU",
+            "personEmail": "ahyc@tuta.io",
+            "created": "2016-12-03T15:54:43.392Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYzdlZTJlOTAtYjk3MC0xMWU2LWI3OTAtZTllOWVmMGYwODZi",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "So yeah if you have doubts on the essay just write me the specific things you want to know and I ll ask her",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9jYWMwNzgwZi03MDM4LTQ5MDctOGU4ZC0zMzdlZjczMGE3ODU",
+            "personEmail": "ahyc@tuta.io",
+            "created": "2016-12-03T15:54:32.313Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYWNiYzVjMDAtYjk3MC0xMWU2LWE5MGYtMWQyMjZkOWYzZTY1",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "And for the essay, i hv a question also   Are they mainly aiming to manufacture only microneedle or including sensor and insulin injector.",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWM3NTk2Mi1hN2FhLTQ3OGItYmE4Yy02OTNlYTVjNTE2ZDU",
+            "personEmail": "aydan253@hotmail.co.uk",
+            "created": "2016-12-03T15:53:46.688Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYTljZDUyNjAtYjk3MC0xMWU2LTg5N2QtZmRhYjVmM2Y2YzRj",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "Good question",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWM3NTk2Mi1hN2FhLTQ3OGItYmE4Yy02OTNlYTVjNTE2ZDU",
+            "personEmail": "aydan253@hotmail.co.uk",
+            "created": "2016-12-03T15:53:41.766Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYTYwNGZmYzAtYjk3MC0xMWU2LWE5MGYtMWQyMjZkOWYzZTY1",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "Cell sheeting would be something funny with my pronunciation. But what is it related to?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWM3NTk2Mi1hN2FhLTQ3OGItYmE4Yy02OTNlYTVjNTE2ZDU",
+            "personEmail": "aydan253@hotmail.co.uk",
+            "created": "2016-12-03T15:53:35.420Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvNmY2MjdjZTAtYjk3MC0xMWU2LTg3NmItM2IwNjUzNWNkY2Q1",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "What is it related to? Spinning? Self assembly?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T15:52:03.758Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvNjI4MGMyMjAtYjk3MC0xMWU2LWEwNTAtMjMwY2RlZmJiYTBk",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "It has been reported that the sheet-like cell assembly referred to as a “cell sheet” can be fabricated by several methods.",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9jYWMwNzgwZi03MDM4LTQ5MDctOGU4ZC0zMzdlZjczMGE3ODU",
+            "personEmail": "ahyc@tuta.io",
+            "created": "2016-12-03T15:51:42.146Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvNzQwNDAzNjAtYjk2ZS0xMWU2LTkxNTktN2Q4NWUzOWFjYTc0",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "Designed for use in clinical applications, cell sheet engineering has been developed as a unique, scaffold-free method of cell processing utilizing temperature-responsive cell culture vessels.",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T15:37:52.534Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZDMxZGQzZTAtYjk2ZC0xMWU2LWI3OTktZWRhOGM0ZWE1YzQ3",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "It s that thing with the mandrel? For blood vessels?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T15:33:22.590Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvY2UxZmU3NzAtYjk2ZC0xMWU2LWFhNTQtNGJhM2Y4ZDVmNDA2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "but isn't what you said some kind of elevtrospinning?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWM3NTk2Mi1hN2FhLTQ3OGItYmE4Yy02OTNlYTVjNTE2ZDU",
+            "personEmail": "aydan253@hotmail.co.uk",
+            "created": "2016-12-03T15:33:14.215Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYmExMGRkMjAtYjk2ZC0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "cell-sheeting is for myocardium patch for example like layering cell sheet to achieve 3D structure",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T15:32:40.562Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvOTA4Yjk3NjAtYjk2ZC0xMWU2LWEwNTAtMjMwY2RlZmJiYTBk",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "With auto formation of collagen? That thing?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T15:31:30.902Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvNGEyMjYyNDAtYjk2ZC0xMWU2LTkxYmEtNGJjYzIxYjUxZmNk",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "i thought cell sheeting was basically the same as bioprinting...",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iZmZjYWE1ZC0yM2M3LTRhMzMtOTgyOS01OTk2YmQzZmVlNzU",
+            "personEmail": "nbkeatley@gmail.com",
+            "created": "2016-12-03T15:29:32.772Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvNDBhNmI1ZTAtYjk2ZC0xMWU2LTkxNTktN2Q4NWUzOWFjYTc0",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "Layer by layer stuff with inkjet printer?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yYmQ0NDYyOC00ZDg5LTQxMmEtYWZmNC0zZWRjYTNmNzFmNmE",
+            "personEmail": "atomic210@googlemail.com",
+            "created": "2016-12-03T15:29:16.862Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMzVhOGFmNDAtYjk2ZC0xMWU2LTgzMDQtODFjNzM4Y2NjMWU2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "basically",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yYmQ0NDYyOC00ZDg5LTQxMmEtYWZmNC0zZWRjYTNmNzFmNmE",
+            "personEmail": "atomic210@googlemail.com",
+            "created": "2016-12-03T15:28:58.420Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMzVhOGFmNDAtYjk2ZC0xMWU2LTgzMDQtODFjNzM4Y2NjMWU2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "that's  self assemby right?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yYmQ0NDYyOC00ZDg5LTQxMmEtYWZmNC0zZWRjYTNmNzFmNmE",
+            "personEmail": "atomic210@googlemail.com",
+            "created": "2016-12-03T15:28:58.420Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMzVhOGFmNDAtYjk2ZC0xMWU2LTgzMDQtODFjNzM4Y2NjMWU2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "related to bioprinting",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yYmQ0NDYyOC00ZDg5LTQxMmEtYWZmNC0zZWRjYTNmNzFmNmE",
+            "personEmail": "atomic210@googlemail.com",
+            "created": "2016-12-03T15:28:58.420Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMzVhOGFmNDAtYjk2ZC0xMWU2LTgzMDQtODFjNzM4Y2NjMWU2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "yeah",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yYmQ0NDYyOC00ZDg5LTQxMmEtYWZmNC0zZWRjYTNmNzFmNmE",
+            "personEmail": "atomic210@googlemail.com",
+            "created": "2016-12-03T15:28:58.420Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMzVhOGFmNDAtYjk2ZC0xMWU2LTgzMDQtODFjNzM4Y2NjMWU2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "bioprinting with self assembly",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yYmQ0NDYyOC00ZDg5LTQxMmEtYWZmNC0zZWRjYTNmNzFmNmE",
+            "personEmail": "atomic210@googlemail.com",
+            "created": "2016-12-03T15:28:58.420Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMzVhOGFmNDAtYjk2ZC0xMWU2LTgzMDQtODFjNzM4Y2NjMWU2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "with bioprinting you bring out the whole thing but with cell sheeting you can make patches or sheets and then implant those",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yYmQ0NDYyOC00ZDg5LTQxMmEtYWZmNC0zZWRjYTNmNzFmNmE",
+            "personEmail": "atomic210@googlemail.com",
+            "created": "2016-12-03T15:28:58.420Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMzVhOGFmNDAtYjk2ZC0xMWU2LTgzMDQtODFjNzM4Y2NjMWU2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "that makes sense",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yYmQ0NDYyOC00ZDg5LTQxMmEtYWZmNC0zZWRjYTNmNzFmNmE",
+            "personEmail": "atomic210@googlemail.com",
+            "created": "2016-12-03T15:28:58.420Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMzVhOGFmNDAtYjk2ZC0xMWU2LTgzMDQtODFjNzM4Y2NjMWU2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "so with cell sheeting you can print out a cornea?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yYmQ0NDYyOC00ZDg5LTQxMmEtYWZmNC0zZWRjYTNmNzFmNmE",
+            "personEmail": "atomic210@googlemail.com",
+            "created": "2016-12-03T15:28:58.420Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMzVhOGFmNDAtYjk2ZC0xMWU2LTgzMDQtODFjNzM4Y2NjMWU2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "it's not necessarily related to printing; they just grow cells on a 'temperature-responsive' culture dish that allows for cells to be removed without the use of trypsin; according to Okano that means more ECM remains and better cell-cell interaction and thus better properties. It is a monolayer though; but those are useful on ocular stuff or they use 4 stacked layers in myocardium repair. But probably by now you got all that",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yYmQ0NDYyOC00ZDg5LTQxMmEtYWZmNC0zZWRjYTNmNzFmNmE",
+            "personEmail": "atomic210@googlemail.com",
+            "created": "2016-12-03T15:28:58.420Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMzVhOGFmNDAtYjk2ZC0xMWU2LTgzMDQtODFjNzM4Y2NjMWU2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "so it's just self assembly in a dish",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yYmQ0NDYyOC00ZDg5LTQxMmEtYWZmNC0zZWRjYTNmNzFmNmE",
+            "personEmail": "atomic210@googlemail.com",
+            "created": "2016-12-03T15:28:58.420Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMzVhOGFmNDAtYjk2ZC0xMWU2LTgzMDQtODFjNzM4Y2NjMWU2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "Well done. But I can t see numerical problems apart from two, am I missing something?",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yYmQ0NDYyOC00ZDg5LTQxMmEtYWZmNC0zZWRjYTNmNzFmNmE",
+            "personEmail": "atomic210@googlemail.com",
+            "created": "2016-12-03T15:28:58.420Z"
+        },
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMzVhOGFmNDAtYjk2ZC0xMWU2LTgzMDQtODFjNzM4Y2NjMWU2",
+            "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWJkOWFmYzAtYjk2Ny0xMWU2LTkzMWYtMDk5MzJjY2FjYjc2",
+            "roomType": "group",
+            "text": "theory stuff like femoral head load shit is on there too",
+            "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yYmQ0NDYyOC00ZDg5LTQxMmEtYWZmNC0zZWRjYTNmNzFmNmE",
+            "personEmail": "atomic210@googlemail.com",
+            "created": "2016-12-03T15:28:58.420Z"
+        }
+
+    ]
+}

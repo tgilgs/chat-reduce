@@ -16,7 +16,7 @@ source venv/bin/activate
 - you are now working within the virtual environment
 
 Install packages to the virtual environment:
-pip install flask Pillow wordcloud
+pip install flask Pillow wordcloud nltk pandas numpy scipy sklearn
 
 to fix an error with python not installed as a backend on OS X go cd ./venv/lib/python3.5/site-packages/matplotlib/mpl-data/ inside the virtual environment and add backend: TkAgg to the matplotlib.rc file
 
