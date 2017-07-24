@@ -1,6 +1,4 @@
 def cluster_topics(json_data):
-
-    from __future__ import print_function
     import json
     import time
     import nltk
@@ -100,7 +98,7 @@ def cluster_topics(json_data):
     t3 = time.clock()
     km.fit(final)
     t4 = time.clock()
-    print("K-means fit time: ", t4 - t3)
+    #print("K-means fit time: ", t4 - t3)
     clusters = km.labels_.tolist()
 
     topics = {}
