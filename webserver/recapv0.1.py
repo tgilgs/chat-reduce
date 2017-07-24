@@ -89,6 +89,21 @@ def generate_wordcloud(outputImgPath, imgDimensions, inputTextPath):
     filepath = re.sub(r'app/', '', outputImgPath)
     return(filepath)
 
+@app.route('/main/wordcloudpage')
+def wordCloudPage():
+
+    #generate wordclouds
+    path = generate_wordcloud('static/wordcloudimage.png', 'test', '../app/static/files/a_new_hope.txt')
+    path2 = generate_wordcloud('static/wordcloudimage2.png', 'test', '../app/static/files/constitution.txt')
+    path3 = generate_wordcloud('static/wordcloudimage3.png', 'test', '../app/static/files/constitution.txt')
+    path4 = generate_wordcloud('static/wordcloudimage4.png', 'test', '../app/static/files/a_new_hope.txt')
+    #####
+
+    return render_template("main.html", key = displayName, rooms=rooms,
+        imga=path,
+        imgb=path2,
+        imgc=path3,
+        imgd=path4)
 
 
 # 'Main' page with a list of all the rooms the user is part of
@@ -113,17 +128,13 @@ def main():
     rooms = listRooms()
 
     #generate wordclouds
-    path = generate_wordcloud('static/wordcloudimage.png', 'test', '../app/static/files/a_new_hope.txt')
-    path2 = generate_wordcloud('static/wordcloudimage2.png', 'test', '../app/static/files/constitution.txt')
-    path3 = generate_wordcloud('static/wordcloudimage3.png', 'test', '../app/static/files/constitution.txt')
-    path4 = generate_wordcloud('static/wordcloudimage4.png', 'test', '../app/static/files/a_new_hope.txt')
+    #path = generate_wordcloud('static/wordcloudimage.png', 'test', '../app/static/files/a_new_hope.txt')
+    #path2 = generate_wordcloud('static/wordcloudimage2.png', 'test', '../app/static/files/constitution.txt')
+    #path3 = generate_wordcloud('static/wordcloudimage3.png', 'test', '../app/static/files/constitution.txt')
+    #path4 = generate_wordcloud('static/wordcloudimage4.png', 'test', '../app/static/files/a_new_hope.txt')
     #####
 
-    return render_template("main.html", key = displayName, rooms=rooms,
-        imga=path,
-        imgb=path2,
-        imgc=path3,
-        imgd=path4)
+    return render_template("main.html", key = displayName, rooms=rooms)
 
 
 
