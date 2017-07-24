@@ -38,7 +38,7 @@ def cluster_topics(json_data):
         return filtered_tokens
 
     # data = json.loads(open("example_revision.json").read())
-    data = json.loads(json_data.read())
+    data = json.loads(open(json_data).read())
     stopwords = stopwords.words("english")
     stemmer = SnowballStemmer("english")
 
