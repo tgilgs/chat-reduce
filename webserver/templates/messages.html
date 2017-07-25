@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Recap: Cisco Spark Web App</title>
+    <title>Recap - {{ topic }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='messages.css') }}">
@@ -20,8 +20,9 @@
         <a class="navbar-brand" href="#">Recap</a>
       </div>
       <ul class="nav navbar-nav">
-        <li><span class="navbar-text">{{ name }}</span></li>
-        <!-- <li class="active"><a href="#">{{ name }}</a></li> -->
+        <li><a href="{{ url_for('main') }}">{{ name }}</a></li>
+        <li><a href="{{ url_for('wordClouds') }}">{{ room }}</a></li>
+        <li class="active"><span class="navbar-text">{{ topic }}</span></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="{{ url_for('index') }}"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
@@ -34,8 +35,6 @@
         <div class="bubble"> {{ message }} </div>
     {% endfor %}
     </div>
-    </br>
-    {% endfor %}
 
   </div>
 
