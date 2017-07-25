@@ -1,43 +1,36 @@
 
 {% extends "base.html" %}
 {% block content %}
-	{% if key %}
-    	<h1>Hello, {{ key }}!</h1>
+
+
+{% for img in imageArr %}
+    <div>
+    {% if loop.index is divisibleby(2) %}
+        <div style="width: 45%; float:right">
+            <img src="{{  img  }}" class="img-responsive" alt="wordcloud1" width="600" height="400" vspace="30">
+        </div>
+        
     {% else %}
-    	No Key
+        <div style="width: 45%; float:left">
+            <img src="{{  img  }}" class="img-responsive" alt=wordcloud2" width="600" height="400" vspace="30">
+        </div>
+    </div>
     {% endif %}
-    <!--
-    {% for name in rooms %}
-    <div><p>{{ name }} says: <b>{{ name }}</b></p></div>
-    {% endfor %}
-	-->
+{% endfor %}
 
+<!--
     <div>
         <div style="width: 45%; float:left">
-            <p> Word cloud 1 from {{ rooms[0] }}</p>
-            <img src="{{  imga  }}" class="img-responsive" alt="wordcloud1" width="600" height="400" vspace="30">
+            <img src="{{  imageArr[2]  }}" class="img-responsive" alt="wordcloud3" width="600" height="400" vspace="30">
         </div>
 
         <div style="width: 45%; float:right">
-            <p> Word cloud 2 from {{ imgb }}</p>
-            <img src="{{  imgb  }}" class="img-responsive" alt="wordcloud2" width="600" height="400" vspace="30">
-        </div>
-    </div>
-
-    <div>
-        <div style="width: 45%; float:left">
-            <p> Word cloud 3 from {{ imgc }}</p>
-            <img src="{{  imgc  }}" class="img-responsive" alt="wordcloud3" width="600" height="400" vspace="30">
-        </div>
-
-        <div style="width: 45%; float:right">
-            <p> Word cloud 4 from {{ imgd }}</p>
-            <img src="{{  imgd  }}" class="img-responsive" alt="wordcloud4" width="600" height="400" vspace="30">
+            <img src="{{  imageArr[0]  }}" class="img-responsive" alt="wordcloud4" width="600" height="400" vspace="30">
         </div>
     </div>
 
 
-
+-->
     <!--<h2>Image</h2>
         <p>The .img-responsive class makes the image scale nicely to the parent element (resize the browser window to see the effect):</p>                  
         <img src="static/img/breb3.jpg" class="img-responsive" alt="fred" width="304" height="236"> 

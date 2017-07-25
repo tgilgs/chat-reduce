@@ -4,6 +4,7 @@ import requests
 import os
 import wordcloud as wc
 import re
+import json
 from PIL import Image, ImageDraw
 from io import BytesIO
 
@@ -70,8 +71,8 @@ def logout():
 #@app.route('/<outputImgPath>')
 #@app.route('/<imgDimensions>')
 #@app.route('/<inputTextPath>')
-def generate_wordcloud(outputImgPath, imgDimensions, inputTextPath):
-    filepath = open(inputTextPath).read()
+def generate_wordcloud(outputImgPath, inputText):
+    #filepath = open(inputTextPath).read()
     
     wordcloud = wc.WordCloud(font_path = '/System/Library/Fonts/HelveticaNeue.dfont', 
         height = 400, width = 600, margin=2, background_color='white', 
@@ -79,7 +80,7 @@ def generate_wordcloud(outputImgPath, imgDimensions, inputTextPath):
         max_font_size=180, min_font_size=4, font_step=2, max_words=40, relative_scaling=0.3,
         regexp=None, collocations=True, random_state=None, mode="RGB",
         colormap=None, normalize_plurals=True)
-    wordcloud.generate(filepath)
+    wordcloud.generate(inputText)
     image = wordcloud.to_image()
 
     image.save(outputImgPath, format='png')
@@ -89,37 +90,12 @@ def generate_wordcloud(outputImgPath, imgDimensions, inputTextPath):
     filepath = re.sub(r'app/', '', outputImgPath)
     return(filepath)
 
-@app.route('/main/wordcloudpage')
-def wordCloudPage():
-
-    #generate wordclouds
-    path = generate_wordcloud('static/wordcloudimage.png', 'test', '../app/static/files/a_new_hope.txt')
-    path2 = generate_wordcloud('static/wordcloudimage2.png', 'test', '../app/static/files/constitution.txt')
-    path3 = generate_wordcloud('static/wordcloudimage3.png', 'test', '../app/static/files/constitution.txt')
-    path4 = generate_wordcloud('static/wordcloudimage4.png', 'test', '../app/static/files/a_new_hope.txt')
-    #####
-
-    return render_template("main.html", key = displayName, rooms=rooms,
-        imga=path,
-        imgb=path2,
-        imgc=path3,
-        imgd=path4)
-
+#@app.route('/main/wordcloudpage')
+#def wordCloudPage():
 
 # 'Main' page with a list of all the rooms the user is part of
 @app.route('/main')
 def main():
-
-
-    # rooms = roomDict.keys()
-    # roomDict.get(<room name>, <default value>)
-
-    # with open('roomList.txt', 'w') as f:
-    #     for room in rooms:
-    #         f.write("%s\n" %room)
-
-    # with open('rooms.txt', 'w') as f:
-    #         json.dump(rooms,f, ensure_ascii = False)
 
     displayName = session.get("displayName", False)
     if not displayName:
@@ -127,14 +103,37 @@ def main():
 
     rooms = listRooms()
 
-    #generate wordclouds
-    #path = generate_wordcloud('static/wordcloudimage.png', 'test', '../app/static/files/a_new_hope.txt')
-    #path2 = generate_wordcloud('static/wordcloudimage2.png', 'test', '../app/static/files/constitution.txt')
-    #path3 = generate_wordcloud('static/wordcloudimage3.png', 'test', '../app/static/files/constitution.txt')
-    #path4 = generate_wordcloud('static/wordcloudimage4.png', 'test', '../app/static/files/a_new_hope.txt')
-    #####
+    #process JSON, extract topics
+    jsonTopics = json.loads(open('../app/static/files/topic_clusters.json').read())
 
-    return render_template("main.html", key = displayName, rooms=rooms)
+    jsonTopicsStr = str(jsonTopics)
+    
+    #count number of topics
+    matches = re.findall("('topic)\d+(':)", jsonTopicsStr)
+    
+    numTopics = len(matches)
+    topics = [None] * numTopics
+    msgs = [None] * numTopics
+
+    #get messages from topics
+    for i in range(0, numTopics):
+        print(str(i))
+        topicKey = 'topic' + str(i)
+        topics[i] = jsonTopics[topicKey]
+        msgs[i] = str(topics[i]['messages'])
+
+    filenames = []
+    #generate wordclouds
+    for i in range(0, numTopics): 
+        filename = 'static/wordcloudimage' + str(i) + '.png'
+        path = generate_wordcloud(filename, msgs[i])
+        filenames.append(path)
+    
+
+    return render_template("main.html", key = displayName, rooms=rooms,
+        imageArr=filenames)
+
+    #return render_template("main.html", key = displayName, rooms=rooms)
 
 
 

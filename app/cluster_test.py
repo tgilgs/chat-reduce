@@ -5,5 +5,5 @@ from extract_topics import cluster_topics
 
 processed_data = cluster_topics('static/files/example_revision.json')
 
-with open('topic_clusters.json', 'w') as outfile:
+with open('static/files/topic_clusters.json', 'w') as outfile:
     json.dump(processed_data, outfile)
