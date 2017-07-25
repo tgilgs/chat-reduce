@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, session, url_for, redirect, json
-
 import json
 import requests
 import os
@@ -14,13 +13,6 @@ app.secret_key = os.environ['secret_key']
 
 client_id = os.environ['client_id']
 client_secret = os.environ['client_secret']
-
-
-###########################################################################################
-
-        #Methods
-
-###########################################################################################
 
 # Required Parameters: - Access Code  - Client ID  - Client secret
 # Output: - A JSON object containing a valid access token
@@ -79,6 +71,7 @@ def getUserProfile():
 # Required Data: - Room ID
 # Output: - A list containing the display names of its group members
 def getMembers(roomId):
+    # url = "https://api.ciscospark.com/v1/memberships"
     url = (
         "https://api.ciscospark.com/v1/memberships?roomId=%s" %roomId
     )
@@ -97,6 +90,8 @@ def getMembers(roomId):
 
 #Generate wordcloud
 def generate_wordcloud(outputImgPath, inputText):
+    #filepath = open(inputTextPath).read()
+
     wordcloud = wc.WordCloud(font_path = '/System/Library/Fonts/HelveticaNeue.dfont',
         height = 400, width = 600, margin=2, background_color='white',
         ranks_only=None, prefer_horizontal=.9, mask=None, scale=1, color_func=None,
@@ -107,17 +102,12 @@ def generate_wordcloud(outputImgPath, inputText):
     image = wordcloud.to_image()
 
     image.save(outputImgPath, format='png')
-
+    #with args.imagefile:
+    #    out = args.imagefile if sys.version < '3' else args.imagefile.buffer
+    #    image.save(outputImgPath, format='png')
     filepath = re.sub(r'static/', '', outputImgPath)
     return(filepath)
 
-
-
-###########################################################################################
-
-        #URL Routes
-
-###########################################################################################
 
 @app.route('/logout')
 def logout():
@@ -133,15 +123,20 @@ def topicMessages(roomName, topic):
     topicMessage = topicMessage[::-1]
 
 
-    return render_template("messages.html", name = session['displayName'], room = roomName, topic = ('Topic ' + str(topic)), topicMessage = topicMessage)
+    return render_template("messages.html", name = session['displayName'], room = roomName, topic = ('Topic' + str(topic)), topicMessage = topicMessage)
 
 @app.route('/chat/<roomName>')
 def wordCloud(roomName):
     roomId = session['rooms_dict'].get(roomName)
     roomMessages = getMessages(roomId)
 
+    # with open ("room_messages.json", "w") as file1:
+    #     json.dump(roomMessages, file1)
+
     processed_data = cluster_topics("room_messages.json")
 
+    # with open ("clustered_topics.json", "w") as file2:
+    #     json.dump(processed_data, file2)
     session['topic'] = processed_data
 
     #process JSON, extract topics
