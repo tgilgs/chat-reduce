@@ -117,28 +117,26 @@ def logout():
 @app.route('/chat/<roomName>/<topic>')
 def topicMessages(roomName, topic):
 
+    topicNumber = 'topic'+str(topic)
     topiclist = session['topic']
-    topicString = 'topic' + topic
-    topicMessage = topiclist[topicString]
-
-    messagelist = list(topicMessage['messages'])
+    topicMessage = topiclist[topicNumber]["messages"]
 
 
-    return render_template("messages.html", name = session['displayName'], room = roomName, topic = topic, topicMessage = messageList)
+    return render_template("messages.html", name = session['displayName'], room = roomName, topic = topic, topicMessage = topicMessage)
 
 @app.route('/chat/<roomName>')
 def wordCloud(roomName):
     roomId = session['rooms_dict'].get(roomName)
     roomMessages = getMessages(roomId)
 
-    with open ("room_messages.json", "w") as file1:
-        json.dump(roomMessages, file1)
+    # with open ("room_messages.json", "w") as file1:
+    #     json.dump(roomMessages, file1)
 
     processed_data = cluster_topics("room_messages.json")
 
-    with open ("clustered_topics.json", "w") as file2:
-        json.dump(processed_data, file2)
-
+    # with open ("clustered_topics.json", "w") as file2:
+    #     json.dump(processed_data, file2)
+    session['topic'] = processed_data
 
     #process JSON, extract topics
     jsonTopics = json.loads(open('clustered_topics.json').read())
@@ -165,10 +163,6 @@ def wordCloud(roomName):
         filename = 'static/wordcloudimage' + str(i) + '.png'
         path = generate_wordcloud(filename, msgs[i])
         filenames.append(path)
-
-
-    for x in filenames:
-        print(x)
 
     return render_template("wordClouds.html", room = roomName, name = session['displayName'], imageArr=filenames)
 
