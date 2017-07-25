@@ -10,8 +10,8 @@ body {
 }
 
 li p {
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
 }
 
 div.tab {
@@ -65,10 +65,10 @@ div.tab button.active {
 }
 
 .wrapper2 {
-  height: 100%;
-  display: flex;
-  justify-content: top;
-  align-items: center;
+  height: 10%;
+  display: inline-block;
+  margin: 0;
+  border: medium solid #73BE47;
 }
 
 #groupImg {
@@ -87,4 +87,37 @@ div.tab button.active {
 
 .word {
   font-size: 36px;
+}
+
+.first_letter, .second_letter, .third_letter, .fourth_letter, .fifth_letter {
+  position: relative;
+}
+
+.letter1_bg, .letter2_bg, .letter3_bg, .letter4_bg, .letter5_bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.letter1_bg {
+  background-color: #D2D2D2;
+}
+
+.letter2_bg {
+  background-color: #A8DFF4;
+}
+
+.letter3_bg {
+  background-color: #0A9AD7;
+}
+
+.letter4_bg {
+  background-color: #73BE47;
+}
+
+.letter5_bg {
+  background-color: #353535;
 }
