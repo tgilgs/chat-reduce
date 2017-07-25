@@ -26,12 +26,12 @@ div.tab button, div.tab a {
 
 div.tab a {
   background-color: #A8DFF4;
-  border: 1px solid #353535;
+  /*border: 1px solid #353535;*/
   border-radius: 10px;
   padding: 10px 20px 10px 20px;
   color: #353535;
   text-decoration: none;
-  box-shadow: 3px 3px 3px gray;
+  /*box-shadow: 3px 3px 3px gray;*/
 }
 
 div.tab button:hover {
@@ -47,6 +47,17 @@ div.tab button.active {
   padding-bottom: 10px;
 }
 
+.imgContainer{
+    float:left;
+    margin-right:2%;
+}
+
+.container2 {
+    width:100%;
+    height:auto;
+    padding:1%;
+}
+
 .wrapper {
   width: 60%;
   margin: 0 auto;
@@ -58,4 +69,49 @@ div.tab button.active {
     padding: 10px 6px;
     border: none;
     position: relative;
+}
+
+.wrapper2 {
+  display: inline-block;
+  font-size: 16vmin;
+}
+
+.first_letter, .second_letter, .third_letter, .fourth_letter, .fifth_letter {
+  position: relative;
+}
+
+.letter1, .letter2, .letter3, .letter4, .letter5, .redirect {
+  opacity: 0;
+}
+
+.letter1_bg, .letter2_bg, .letter3_bg, .letter4_bg, .letter5_bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.letter1_bg {
+  background-color: #D2D2D2;
+}
+
+.letter2_bg {
+  background-color: #A8DFF4;
+}
+
+.letter3_bg {
+  background-color: #0A9AD7;
+}
+
+.letter4_bg {
+  background-color: #73BE47;
+}
+
+.letter5_bg {
+  background-color: #353535;
 }
