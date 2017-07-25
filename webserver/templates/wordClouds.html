@@ -31,20 +31,23 @@
   <div class="container">
 
 
-
+{% set count = [0] %}
 {% for img in imageArr %}
     <div>
-    {% if loop.index is divisibleby(2) %}
-        <div style="width: 45%; float:right">
-            <img src="{{  url_for('static', filename=img)  }}" class="img-responsive" alt="wordcloud{{loop.index}}" width="600" height="400" vspace="30">
-        </div>
-        
-    {% else %}
-        <div style="width: 45%; float:left">
-            <img src="{{  url_for('static', filename=img)  }}" class="img-responsive" alt="wordcloud{{loop.index}}" width="600" height="400" vspace="30">
-        </div>
+      <a href="{{ url_for('wordCloud', roomName = room, topic = count[0]) }}">
+        {% if loop.index is divisibleby(2) %}
+            <div style="width: 45%; float:right">
+                <img src="{{  url_for('static', filename=img)  }}" class="img-responsive" alt="wordcloud{{loop.index}}" width="600" height="400" vspace="30">
+            </div>
+
+        {% else %}
+            <div style="width: 45%; float:left">
+                <img src="{{  url_for('static', filename=img)  }}" class="img-responsive" alt="wordcloud{{loop.index}}" width="600" height="400" vspace="30">
+            </div>
+      </a>
     </div>
     {% endif %}
+{% if count.append(count.pop() + 1) %}{% endif %}
 {% endfor %}
 
 

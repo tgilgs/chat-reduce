@@ -91,9 +91,9 @@ def getMembers(roomId):
 #Generate wordcloud
 def generate_wordcloud(outputImgPath, inputText):
     #filepath = open(inputTextPath).read()
-    
-    wordcloud = wc.WordCloud(font_path = '/System/Library/Fonts/HelveticaNeue.dfont', 
-        height = 400, width = 600, margin=2, background_color='white', 
+
+    wordcloud = wc.WordCloud(font_path = '/System/Library/Fonts/HelveticaNeue.dfont',
+        height = 400, width = 600, margin=2, background_color='white',
         ranks_only=None, prefer_horizontal=.9, mask=None, scale=1, color_func=None,
         max_font_size=180, min_font_size=4, font_step=2, max_words=40, relative_scaling=0.3,
         regexp=None, collocations=True, random_state=None, mode="RGB",
@@ -114,6 +114,11 @@ def logout():
     session.clear()
     return redirect(url_for('index'))
 
+@app.route('/chat/<roomName>/<topic>')
+def topicMessages(roomName, topic):
+
+    return render_template("messages.html", name = session['displayName'], room = roomName, topic = topic)
+
 @app.route('/chat/<roomName>')
 def wordCloud(roomName):
     roomId = session['rooms_dict'].get(roomName)
@@ -132,10 +137,10 @@ def wordCloud(roomName):
     jsonTopics = json.loads(open('clustered_topics.json').read())
 
     jsonTopicsStr = str(jsonTopics)
-    
+
     #count number of topics
     matches = re.findall("('topic)\d+(':)", jsonTopicsStr)
-    
+
     numTopics = len(matches)
     topics = [None] * numTopics
     msgs = [None] * numTopics
@@ -149,7 +154,7 @@ def wordCloud(roomName):
 
     filenames = []
     #generate wordclouds
-    for i in range(0, numTopics): 
+    for i in range(0, numTopics):
         filename = 'static/wordcloudimage' + str(i) + '.png'
         path = generate_wordcloud(filename, msgs[i])
         filenames.append(path)
