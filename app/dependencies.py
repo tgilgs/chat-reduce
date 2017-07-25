@@ -1,4 +1,4 @@
 import nltk
 nltk.download('stopwords')
 nltk.download('punkt')
-nltk.download('SnowballStemmer')
+nltk.download('snowball_data')
