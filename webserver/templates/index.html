@@ -5,10 +5,9 @@
   <title>Recap</title>
 
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-  
+
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='index.css') }}">
   <!-- <link rel=stylesheet type=text/css href="../static/index.css"> -->
-
 </head>
 
 <body>
@@ -22,39 +21,13 @@
       </div>
     </div>
 
-
     <div id="Home" class="tabcontent">
-      <!-- <p>Home</p> -->
-        <!-- <div id="recapImg">
-          <img src="../static/recapbot.jpg" alt="recapbot Logo" align="left">
-        </div> -->
-        <div class="wrapper2">
-          <span class="first_letter">
-            <span class="letter1">r</span>
-            <span class="letter1_bg"></span>
-          </span>
-          <span class="second_letter">
-            <span class="letter2">e</span>
-            <span class="letter2_bg"></span>
-          </span>
-          <span class="third_letter">
-            <span class="letter3">c</span>
-            <span class="letter3_bg"></span>
-          </span>
-          <span class="fourth_letter">
-            <span class="letter4">a</span>
-            <span class="letter4_bg"></span>
-          </span>
-          <span class="fifth_letter">
-            <span class="letter5">p</span>
-            <span class="letter5_bg"></span>
-          </span>
-        </div>
+        <p style="text-align:center; font-size:1100%">recap </p>
     </div>
 
     <div id="Info" class="tabcontent">
       <div id="infoTxt">
-        <p>This applicaiton was inspired by 'recapbot' - created during the London TechCrunch Disrupt Hackathon 2016. The original bot took the conversation from a Spark chatroom and processed the messages as being 'on' or 'off' topic, returning a markdown where 'off' topic comments were suppressed, and 'on' topic comments were enlarged. <br><br> We now go a step further and summarise the contents of a chatroom into key topics in the conversation. Each topic is displayed as a wordcloud, leading you to all the messages related to that topic to give you a neat, visual overview of all the discussions in the chatrooms. Sign in to your Spark account and give it a try!</p>
+        <p style="text-align:center; font-size:150%">This applicaiton was inspired by 'recapbot' - created during the London TechCrunch Disrupt Hackathon 2016. The original bot took the conversation from a Spark chatroom and processed the messages as being 'on' or 'off' topic, returning a markdown where 'off' topic comments were suppressed, and 'on' topic comments were enlarged. <br><br> We now go a step further and summarise the contents of a chatroom into key topics in the conversation. Each topic is displayed as a wordcloud, leading you to all the messages related to that topic to give you a neat, visual overview of all the discussions in the chatrooms. Sign in to your Spark account and give it a try!</p>
       </div>
       <div id="groupImg">
           <img src="../static/wordclouds.jpg" alt="group photo" align="center">
@@ -62,28 +35,26 @@
     </div>
 
     <div id="Contact" class="tabcontent">
-      <p>For more information, contact the developer team:</p>
-      <div class="container2">
-        <div class="imgContainer">
-          <img src="../static/tom.jpg" height="200" width="200"/>
-          <p>Tom Gilgan</p>
-        </div>
-        <div class="imgContainer">
-          <img src="../static/aydan.jpg"/ height="200" width="200"/>
-          <p>Aydan Gasimova</p>
-        </div>
-        <div class="imgContainer">
-          <img src="../static/adrian.jpg"/ height="200" width="200"/>
-          <p>Adrian Chung</p>
-        </div>
+      <p style="text-align:center; font-size:130%">For more information, contact the developer team:</p>
+      <p style="text-align:center; font-size:130%">GitHub: <a href="https://github.com/tgilgs/chat-reduce">Recap</a></p>
+      <div style="display:flex;justify-content:center;align-items:center;height:80px;">
+          <div style="width:100%;height:100%;">
+            <img src="../static/tom.jpg" height="200" width="200"/>
+            <p>Tom Gilgan</p>
+          </div>
+          <div style="width:100%;height:100%;">
+            <img src="../static/aydan.jpg"/ height="200" width="200"/>
+            <p>Aydan Gasimova</p>
+          </div>
+          <div style="width:100%;height:100%;">
+            <img src="../static/adrian.jpg"/ height="200" width="200"/>
+            <p>Adrian Chung</p>
+          </div>
       </div>
     </div>
-</div>
+  </div>
 
-
-
-  <!-- <script type="text/javascript" src="../static/index.js"></script> -->
-  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
 
 </body>
 </html>
