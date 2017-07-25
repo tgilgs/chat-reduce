@@ -21,7 +21,7 @@ def cluster_topics(json_data):
         filtered_tokens = []
         # filter out any tokens not containing letters (e.g., numeric tokens, raw punctuation)
         for token in tokens:
-            if re.search('[a-zA-Z]', token):
+            if re.search('[a-zA-Z]', token) and token not in stopwords:
                 filtered_tokens.append(token)
         stems = [stemmer.stem(t) for t in filtered_tokens]
         return stems
@@ -32,14 +32,15 @@ def cluster_topics(json_data):
         tokens = [word.lower() for sent in nltk.sent_tokenize(text) for word in nltk.word_tokenize(sent)]
         filtered_tokens = []
         # filter out any tokens not containing letters (e.g., numeric tokens, raw punctuation)
-        for token in tokens:
-            if re.search("[a-zA-Z]", token):
+        for token in tokens :
+            if re.search("[a-zA-Z]", token) and token not in stopwords:
                 filtered_tokens.append(token)
         return filtered_tokens
 
     # data = json.loads(open("example_revision.json").read())
     data = json.loads(open(json_data).read())
     stopwords = stopwords.words("english")
+    stopwords.append('blah')
     stemmer = SnowballStemmer("english")
 
     # Extract messages
@@ -62,7 +63,7 @@ def cluster_topics(json_data):
         allwords_tokenized = tokenize_only(i)
         totalvocab_tokenized.extend(allwords_tokenized)
 
-    vocab_frame = pd.DataFrame({'words': totalvocab_tokenized}, index=totalvocab_stemmed)
+    # vocab_frame = pd.DataFrame({'words': totalvocab_tokenized}, index=totalvocab_stemmed)
     # print('there are ' + str(vocab_frame.shape[0]) + ' items in vocab_frame')
 
     # Cluster messages according to topic using K-means
