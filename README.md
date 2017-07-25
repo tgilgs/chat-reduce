@@ -1,8 +1,11 @@
 # chat-reduce
 
 Summarise your Spark chatroom conversations into visual wordclouds separated into key topics. 
+![alt text][wordcloud]
 
-Instructions to get started:
+[wordcloud]: https://github.com/tgilgs/chat-reduce/webserver/static/wordclouds.jpg "Wordclouds"
+
+## Instructions to get started:
 
 Install python package for virtual environments
 
@@ -38,3 +41,9 @@ Extra notes:
 - to fix an error with python not installed as a backend on OS X go cd ./venv/lib/python3.5/site-packages/matplotlib/mpl-data/ inside the virtual environment and add backend: TkAgg to the matplotlib.rc file
 
 - the browser caches the old images so use incognito mode and you may need to reopen to refresh new images. This will be fixed once I figure out how to deliver images directly to flask
+
+
+## Contributors:
+Adrian C.
+Aydan G.
+Thomas G.
