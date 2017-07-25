@@ -1,6 +1,7 @@
 # chat-reduce
 
-Summarise your Spark chatroom conversations into visual wordclouds separated into key topics. 
+Summarise your Spark chatroom conversations into visual wordclouds separated into key topics: 
+
 ![wordcloud](webserver/static/wordclouds.jpg)
 
 
