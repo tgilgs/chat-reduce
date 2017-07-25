@@ -1,9 +1,8 @@
 # chat-reduce
 
 Summarise your Spark chatroom conversations into visual wordclouds separated into key topics. 
-![alt text][wordcloud]
+![wordcloud](webserver/static/wordclouds.jpg)
 
-[wordcloud]: https://github.com/tgilgs/chat-reduce/webserver/static/wordclouds.jpg "Wordclouds"
 
 ## Instructions to get started:
 
