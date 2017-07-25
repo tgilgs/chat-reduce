@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recap - {{ room }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+
+  <body>
+
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Recap</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="{{ url_for('main') }}">{{ name }}</a></li>
+        <li class="active"><span class="navbar-text">{{ room }}</span></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ url_for('index') }}"><<span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!--
+    {% for name in rooms %}
+    <div><p>{{ name }} says: <b>{{ name }}</b></p></div>
+    {% endfor %}
+  -->
+
+    <!-- <div>
+        <div style="width: 45%; float:left">
+            <p> Word cloud 1 from {{ imga }}</p>
+            <img src="{{  imga  }}" class="img-responsive" alt="wordcloud1" width="600" height="400" vspace="30">
+        </div>
+
+        <div style="width: 45%; float:right">
+            <p> Word cloud 2 from {{ imgb }}</p>
+            <img src="{{  imgb  }}" class="img-responsive" alt="wordcloud2" width="600" height="400" vspace="30">
+        </div>
+    </div>
+
+    <div>
+        <div style="width: 45%; float:left">
+            <p> Word cloud 3 from {{ imgc }}</p>
+            <img src="{{  imgc  }}" class="img-responsive" alt="wordcloud3" width="600" height="400" vspace="30">
+        </div>
+
+        <div style="width: 45%; float:right">
+            <p> Word cloud 4 from {{ imgd }}</p>
+            <img src="{{  imgd  }}" class="img-responsive" alt="wordcloud4" width="600" height="400" vspace="30">
+        </div>
+    </div> -->
+
+
+
+    <!--<h2>Image</h2>
+        <p>The .img-responsive class makes the image scale nicely to the parent element (resize the browser window to see the effect):</p>
+        <img src="static/img/breb3.jpg" class="img-responsive" alt="fred" width="304" height="236">
+
+        <p> image path {{  imga  }} </p>
+        <div> <img src="{{  imga  }}" alt="experiment"></div>
+   -->
+  </div>
+
+
+  </body>
+</html>

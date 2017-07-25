@@ -1,41 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recap: Cisco Spark Web App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
 
-{% extends "base.html" %}
-{% block content %}
+
+  <body>
 
 
-{% for img in imageArr %}
-    <div>
-    {% if loop.index is divisibleby(2) %}
-        <div style="width: 45%; float:right">
-            <img src="{{  img  }}" class="img-responsive" alt="wordcloud1" width="600" height="400" vspace="30">
-        </div>
-        
-    {% else %}
-        <div style="width: 45%; float:left">
-            <img src="{{  img  }}" class="img-responsive" alt=wordcloud2" width="600" height="400" vspace="30">
-        </div>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Recap</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><span class="navbar-text">{{ name }}</span></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ url_for('index') }}"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+      </ul>
     </div>
-    {% endif %}
-{% endfor %}
+  </nav>
 
-<!--
-    <div>
-        <div style="width: 45%; float:left">
-            <img src="{{  imageArr[2]  }}" class="img-responsive" alt="wordcloud3" width="600" height="400" vspace="30">
+  <div class="container">
+    {% set count = [0] %}
+    {% for room_row in rooms | batch(2) %}
+    <div class="row">
+      {% for room in room_row %}
+      <div class="col-sm-6">
+        {% if room is defined %}
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <a href="{{ url_for('wordCloud', roomName = room) }}">
+              <h3 class="panel-title text-left"><span class="glyphicon glyphicon-registration-mark"></span>
+                  {{ room }}
+              </h3>
+            </a>
+          </div>
+          <div class="panel-body">
+              {% for member in members[count[0]] %}
+                <p class = "text-left"><span class="glyphicon glyphicon-user"></span> {{ member }}</p>
+              {% endfor %}
+              {% if count.append(count.pop() + 1) %}{% endif %}
+          </div>
         </div>
-
-        <div style="width: 45%; float:right">
-            <img src="{{  imageArr[0]  }}" class="img-responsive" alt="wordcloud4" width="600" height="400" vspace="30">
-        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
     </div>
+    </br>
+    {% endfor %}
+
+  </div>
 
 
--->
-    <!--<h2>Image</h2>
-        <p>The .img-responsive class makes the image scale nicely to the parent element (resize the browser window to see the effect):</p>                  
-        <img src="static/img/breb3.jpg" class="img-responsive" alt="fred" width="304" height="236"> 
-        
-        <p> image path {{  imga  }} </p> 
-        <div> <img src="{{  imga  }}" alt="experiment"></div>
-   -->
-{% endblock %}
+  </body>
+</html>
