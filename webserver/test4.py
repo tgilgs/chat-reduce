@@ -117,7 +117,14 @@ def logout():
 @app.route('/chat/<roomName>/<topic>')
 def topicMessages(roomName, topic):
 
-    return render_template("messages.html", name = session['displayName'], room = roomName, topic = topic)
+    topiclist = session['topic']
+    topicString = 'topic' + topic
+    topicMessage = topiclist[topicString]
+
+    messagelist = list(topicMessage['messages'])
+
+
+    return render_template("messages.html", name = session['displayName'], room = roomName, topic = topic, topicMessage = messageList)
 
 @app.route('/chat/<roomName>')
 def wordCloud(roomName):
