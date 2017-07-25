@@ -91,9 +91,9 @@ def getMembers(roomId):
 #Generate wordcloud
 def generate_wordcloud(outputImgPath, inputText):
     #filepath = open(inputTextPath).read()
-    
-    wordcloud = wc.WordCloud(font_path = '/System/Library/Fonts/HelveticaNeue.dfont', 
-        height = 400, width = 600, margin=2, background_color='white', 
+
+    wordcloud = wc.WordCloud(font_path = '/System/Library/Fonts/HelveticaNeue.dfont',
+        height = 400, width = 600, margin=2, background_color='white',
         ranks_only=None, prefer_horizontal=.9, mask=None, scale=1, color_func=None,
         max_font_size=180, min_font_size=4, font_step=2, max_words=40, relative_scaling=0.3,
         regexp=None, collocations=True, random_state=None, mode="RGB",
@@ -105,7 +105,7 @@ def generate_wordcloud(outputImgPath, inputText):
     #with args.imagefile:
     #    out = args.imagefile if sys.version < '3' else args.imagefile.buffer
     #    image.save(outputImgPath, format='png')
-    filepath = re.sub(r'app/', '', outputImgPath)
+    filepath = re.sub(r'static/', '', outputImgPath)
     return(filepath)
 
 
@@ -113,6 +113,18 @@ def generate_wordcloud(outputImgPath, inputText):
 def logout():
     session.clear()
     return redirect(url_for('index'))
+
+@app.route('/chat/<roomName>/<topic>')
+def topicMessages(roomName, topic):
+
+    topiclist = session['topic']
+    topicString = 'topic' + topic
+    topicMessage = topiclist[topicString]
+
+    messagelist = list(topicMessage['messages'])
+
+
+    return render_template("messages.html", name = session['displayName'], room = roomName, topic = topic, topicMessage = messageList)
 
 @app.route('/chat/<roomName>')
 def wordCloud(roomName):
@@ -132,10 +144,10 @@ def wordCloud(roomName):
     jsonTopics = json.loads(open('clustered_topics.json').read())
 
     jsonTopicsStr = str(jsonTopics)
-    
+
     #count number of topics
     matches = re.findall("('topic)\d+(':)", jsonTopicsStr)
-    
+
     numTopics = len(matches)
     topics = [None] * numTopics
     msgs = [None] * numTopics
@@ -149,10 +161,14 @@ def wordCloud(roomName):
 
     filenames = []
     #generate wordclouds
-    for i in range(0, numTopics): 
+    for i in range(0, numTopics):
         filename = 'static/wordcloudimage' + str(i) + '.png'
         path = generate_wordcloud(filename, msgs[i])
         filenames.append(path)
+
+
+    for x in filenames:
+        print(x)
 
     return render_template("wordClouds.html", room = roomName, name = session['displayName'], imageArr=filenames)
 
