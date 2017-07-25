@@ -144,7 +144,7 @@ def wordCloud(roomName):
     numTopics = len(matches)
     topics = [None] * numTopics
     msgs = [None] * numTopics
-
+    session['topics'] = jsonTopics
     #get messages from topics
     for i in range(0, numTopics):
         print(str(i))
@@ -159,9 +159,6 @@ def wordCloud(roomName):
         path = generate_wordcloud(filename, msgs[i])
         filenames.append(path)
 
-
-    for x in filenames:
-        print(x)
 
     return render_template("wordClouds.html", room = roomName, name = session['displayName'], imageArr=filenames)
 
