@@ -3,7 +3,6 @@ def cluster_topics(json_data):
     import time
     import nltk
     import re
-    import pandas as pd
     import numpy as np
     import scipy as sp
     import math
