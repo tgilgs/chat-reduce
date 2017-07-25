@@ -1,5 +1,7 @@
 # chat-reduce
 
+Summarise your Spark chatroom conversations into visual wordclouds separated into key topics. 
+
 Instructions to get started:
 
 Install python package for virtual environments

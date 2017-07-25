@@ -36,7 +36,7 @@ def cluster_topics(json_data):
                 filtered_tokens.append(token)
         return filtered_tokens
 
-    # data = json.loads(open("example_revision.json").read())
+    #data = json.loads(open("room_messages.json").read())
     data = json.loads(open(json_data).read())
     stopwords = stopwords.words("english")
     stopwords.append('blah')
@@ -46,11 +46,12 @@ def cluster_topics(json_data):
     messages = []
     time_stamps = []
     for i in range(len(data["items"])):
-        message = (data["items"][i]["text"])
-        time_stamp = data["items"][i]["created"]
-        t = float(re.search("[0-9]*:[0-9]*", time_stamp).group(0).replace(":", "."))
-        messages.append(message)
-        time_stamps.append(t)
+        if "text" in data["items"][i]:
+            message = (data["items"][i]["text"])
+            time_stamp = data["items"][i]["created"]
+            t = float(re.search("[0-9]*:[0-9]*", time_stamp).group(0).replace(":", "."))
+            messages.append(message)
+            time_stamps.append(t)
 
     # Extract stemmed and tokenized vocab
     totalvocab_stemmed = []
@@ -111,9 +112,9 @@ def cluster_topics(json_data):
                 t_messages.append(messages[i])
         topics[t_name]['messages'] = t_messages
 
-        # Export as json
-        # with open('topics_time.json', 'w') as outfile:
-        # json.dump(topics, outfile)
+        #Export as json
+        # with open('topics.json', 'w') as outfile:
+        #json.dump(topics, outfile)
 
 
     # Inspect clusters
