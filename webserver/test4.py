@@ -105,7 +105,7 @@ def generate_wordcloud(outputImgPath, inputText):
     #with args.imagefile:
     #    out = args.imagefile if sys.version < '3' else args.imagefile.buffer
     #    image.save(outputImgPath, format='png')
-    filepath = re.sub(r'app/', '', outputImgPath)
+    filepath = re.sub(r'static/', '', outputImgPath)
     return(filepath)
 
 
@@ -153,6 +153,10 @@ def wordCloud(roomName):
         filename = 'static/wordcloudimage' + str(i) + '.png'
         path = generate_wordcloud(filename, msgs[i])
         filenames.append(path)
+
+
+    for x in filenames:
+        print(x)
 
     return render_template("wordClouds.html", room = roomName, name = session['displayName'], imageArr=filenames)
 
