@@ -109,6 +109,10 @@ def generate_wordcloud(outputImgPath, inputText):
     return(filepath)
 
 
+
+
+
+
 @app.route('/logout')
 def logout():
     session.clear()
@@ -116,9 +120,8 @@ def logout():
 
 @app.route('/chat/<roomName>/<topic>')
 def topicMessages(roomName, topic):
-
     topicNumber = 'topic'+str(topic)
-    topiclist = session['topic']
+    topiclist = json.loads(open('clustered_topics.json').read())
     topicMessage = topiclist[topicNumber]["messages"]
     topicMessage = topicMessage[::-1]
 
@@ -130,14 +133,13 @@ def wordCloud(roomName):
     roomId = session['rooms_dict'].get(roomName)
     roomMessages = getMessages(roomId)
 
-    # with open ("room_messages.json", "w") as file1:
-    #     json.dump(roomMessages, file1)
+    with open ("room_messages.json", "w") as file1:
+        json.dump(roomMessages, file1)
 
     processed_data = cluster_topics("room_messages.json")
 
-    # with open ("clustered_topics.json", "w") as file2:
-    #     json.dump(processed_data, file2)
-    session['topic'] = processed_data
+    with open ("clustered_topics.json", "w") as file2:
+        json.dump(processed_data, file2)
 
     #process JSON, extract topics
     jsonTopics = json.loads(open('clustered_topics.json').read())
