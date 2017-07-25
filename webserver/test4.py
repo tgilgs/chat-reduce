@@ -120,30 +120,32 @@ def wordCloud(roomName):
     roomMessages = getMessages(roomId)
 
     processed_data = cluster_topics(roomMessages)
-    jsonTopicsStr = str(processed_data)
+    with open ("results.json", "w") as file1:
+        json.dump(processed_data, file1, ensure_ascii = False)
+    # jsonTopicsStr = str(processed_data)
     
-    #count number of topics
-    matches = re.findall("('topic)\d+(':)", jsonTopicsStr)
+    # #count number of topics
+    # matches = re.findall("('topic)\d+(':)", jsonTopicsStr)
     
-    numTopics = len(matches)
-    topics = [None] * numTopics
-    msgs = [None] * numTopics
+    # numTopics = len(matches)
+    # topics = [None] * numTopics
+    # msgs = [None] * numTopics
 
-    #get messages from topics
-    for i in range(0, numTopics):
-        print(str(i))
-        topicKey = 'topic' + str(i)
-        topics[i] = jsonTopics[topicKey]
-        msgs[i] = str(topics[i]['messages'])
+    # #get messages from topics
+    # for i in range(0, numTopics):
+    #     print(str(i))
+    #     topicKey = 'topic' + str(i)
+    #     topics[i] = jsonTopics[topicKey]
+    #     msgs[i] = str(topics[i]['messages'])
 
-    filenames = []
-    #generate wordclouds
-    for i in range(0, numTopics): 
-        filename = 'static/wordcloudimage' + str(i) + '.png'
-        path = generate_wordcloud(filename, msgs[i])
-        filenames.append(path)
+    # filenames = []
+    # #generate wordclouds
+    # for i in range(0, numTopics): 
+    #     filename = 'static/wordcloudimage' + str(i) + '.png'
+    #     path = generate_wordcloud(filename, msgs[i])
+    #     filenames.append(path)
 
-    return render_template("wordClouds.html", room = roomName, name = session['displayName'], imageArr=filenames)
+    return render_template("wordClouds.html", room = roomName, name = session['displayName'])#, imageArr=filenames)
 
 # 'Main' page with a list of all the rooms, and its users, that the user is a member of
 @app.route('/main')
