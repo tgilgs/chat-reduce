@@ -68,9 +68,14 @@ def cluster_topics(json_data):
 
     # Cluster messages according to topic using K-means
     # define vectorizer parameters
-    tfidf_vectorizer = TfidfVectorizer(max_df=0.99, max_features=200000,
+    if len(allwords_stemmed) > 200:
+        tfidf_vectorizer = TfidfVectorizer(max_df=0.99, max_features=200000,
                                         min_df=0.01, stop_words='english',
                                         use_idf=True, tokenizer=tokenize_and_stem, ngram_range=(1, 3))
+    else:
+        tfidf_vectorizer = TfidfVectorizer(max_df=1.0, max_features=200000,
+                                           min_df=0.0, stop_words='english',
+                                           use_idf=True, tokenizer=tokenize_and_stem, ngram_range=(1, 3))
 
     # fit the vectorizer to messages
     # t1 = time.clock()
@@ -93,7 +98,10 @@ def cluster_topics(json_data):
 
     # K-means clustering
     # num_clusters = 5
-    num_clusters = math.floor(math.sqrt(len(messages)) / 2)
+    if len(messages) > 10:
+        num_clusters = math.floor(math.sqrt(len(messages)) / 2)
+    else:
+        num_clusters = 1
 
     km = KMeans(n_clusters=num_clusters)
     t3 = time.clock()
