@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session, url_for, redirect, json
-import json
+
 import requests
 import os
 import wordcloud as wc
