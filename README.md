@@ -40,10 +40,10 @@ Once everything is installed, cd into webserver and:
 ```
 source credentials.sh
 ```
-Then just run ```python recap_1.0.py``` from terminal and access the page through localhost:8080 in your browser. Sign in to your Spark account and get started!
+Then just run ```python recap_1.0.py``` from terminal and access the page through ```localhost:8080``` in your browser. Sign in to your Spark account and get started!
 
 Extra notes:
-- to fix an error with python not installed as a backend on OS X go cd ./venv/lib/python3.5/site-packages/matplotlib/mpl-data/ inside the virtual environment and add backend: TkAgg to the matplotlib.rc file
+- to fix an error with python not installed as a backend on OS X go ```cd ./venv/lib/python3.5/site-packages/matplotlib/mpl-data/``` inside the virtual environment and add ```backend: TkAgg``` to the "matplotlib.rc" file
 
 - the browser caches the old images so use incognito mode and you may need to reopen to refresh new images. This will be fixed once I figure out how to deliver images directly to flask
 
