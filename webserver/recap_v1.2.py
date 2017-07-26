@@ -4,15 +4,20 @@ import requests
 import os
 import wordcloud as wc
 import re
+import time
 from PIL import Image, ImageDraw
 from io import BytesIO
 from extract_topics import cluster_topics
+
+import shutil
 
 app = Flask(__name__)
 app.secret_key = os.environ['secret_key']
 
 client_id = os.environ['client_id']
 client_secret = os.environ['client_secret']
+
+wordcloudImgPath = "static/wordcloud_images"
 
 
 #######################################################################################
@@ -113,19 +118,29 @@ def generate_wordcloud(outputImgPath, inputText):
 # Method to generate a wordcloud from a text file containing extracted messages about a specific topic:
 #   Required Data: - Text file
 #   Output: - Filepath to the generated word cloud
+    
+    #mode = os.stat(wordcloudImgPath)
+
     wordcloud = wc.WordCloud(font_path = '/System/Library/Fonts/HelveticaNeue.dfont',
         height = 400, width = 600, margin=2, background_color='white',
         ranks_only=None, prefer_horizontal=.9, mask=None, scale=1, color_func=None,
         max_font_size=180, min_font_size=4, font_step=2, max_words=40, relative_scaling=0.3,
         regexp=None, collocations=True, random_state=None, mode="RGB",
         colormap=None, normalize_plurals=True)
-    wordcloud.generate(inputText)
-    image = wordcloud.to_image()
-    image.save(outputImgPath, format="PNG")
+    
+    try:
+        wordcloud.generate(inputText)
+        image = wordcloud.to_image()
+        image.save(outputImgPath, format="PNG")
 
-    # Regular Expression method - search and replace pattern in output image path:
-    filepath = re.sub(r'static/', '', outputImgPath)
-    return(filepath)
+        # Regular Expression method - search and replace pattern in output image path:
+        filename = re.sub(r'static/', '', outputImgPath)
+        return(filename)
+
+
+    except ZeroDivisionError as e:
+        print("not enough words divided by zero!!!!")
+        return(None)
 
 
 
@@ -158,6 +173,15 @@ def topicMessages(roomName, topic):
 # List of Rooms route
 @app.route('/chat/<roomName>')
 def wordCloud(roomName):
+
+    if os.path.exists(wordcloudImgPath):
+        shutil.rmtree(wordcloudImgPath)
+
+    os.makedirs(wordcloudImgPath)
+    
+    #while not os.path.exists(wordcloudImgPath):
+    #    time.sleep(0.01)
+    
     roomId = session['rooms_dict'].get(roomName)
     roomMessages = getMessages(roomId)
 
@@ -191,7 +215,7 @@ def wordCloud(roomName):
     filenames = []
     #generate wordclouds
     for i in range(0, numTopics):
-        filename = 'static/wordcloudimage' + str(i) + '.png'
+        filename = wordcloudImgPath + '/wordcloudimage' + str(i) + '.png'
         path = generate_wordcloud(filename, msgs[i])
         filenames.append(path)
 
