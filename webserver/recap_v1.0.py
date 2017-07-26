@@ -125,7 +125,6 @@ def topicMessages(roomName, topic):
     topicMessage = topiclist[topicNumber]["messages"]
     topicMessage = topicMessage[::-1]
 
-
     return render_template("messages.html", name = session['displayName'], room = roomName, topic = ('Topic' + str(topic)), topicMessage = topicMessage)
 
 @app.route('/chat/<roomName>')
