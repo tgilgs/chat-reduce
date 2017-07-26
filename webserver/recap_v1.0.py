@@ -175,12 +175,11 @@ def main():
     if not displayName:
         return redirect(url_for('index'), code=302)
 
-    roomSession = session.get("rooms_dict", False)
-    if not roomSession:
+    roomDict = session.get("rooms_dict", False)
+    if not roomDict:
         roomDict = listRooms()
         session['rooms_dict'] = roomDict
 
-    roomDict = session['rooms_dict']
     rooms = list(roomDict.keys())
 
     participants = []
