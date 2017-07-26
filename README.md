@@ -1,4 +1,4 @@
-# chat-reduce
+# Recap: Cisco Spark Web Application
 
 Summarise your Spark chatroom conversations into visual wordclouds separated into key topics: 
 
