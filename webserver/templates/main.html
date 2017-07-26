@@ -44,7 +44,7 @@
           </div>
           <div class="panel-body">
               {% for member in members[count[0]] %}
-                <p class = "text-left"><span class="glyphicon glyphicon-user"></span> {{ member }}</p>
+                  <p class = "text-left"><span class="glyphicon glyphicon-user" style="display:inline-block; width: 20px;"></span> {{ member }}</p>
               {% endfor %}
               {% if count.append(count.pop() + 1) %}{% endif %}
           </div>
