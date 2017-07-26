@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      body { padding-top: 70px; }
+    </style>
   </head>
 
   <body>
 
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">Recap</a>
@@ -29,28 +32,26 @@
   <div class="container">
 
 
-{% set count = [0] %}
-{% for img in imageArr %}
-    <div>
-      <a href="{{ url_for('topicMessages', roomName = room, topic = count[0]) }}">
-        {% if loop.index is divisibleby(2) %}
-            <div style="width: 45%; float:right">
-                <img src="{{  url_for('static', filename=img)  }}" class="img-responsive" alt="wordcloud{{loop.index}}" width="600" height="400" vspace="30">
-            </div>
+  {% set count = [0] %}
+  {% for img in imageArr %}
+  <div>
+    <a href="{{ url_for('topicMessages', roomName = room, topic = count[0]) }}">
+      {% if loop.index is divisibleby(2) %}
+      <div style="width: 45%; float:right">
+        <img src="{{  url_for('static', filename=img)  }}" class="img-responsive" alt="wordcloud{{loop.index}}" width="600" height="400" vspace="30">
+      </div>
 
-        {% else %}
-            <div style="width: 45%; float:left">
-                <img src="{{  url_for('static', filename=img)  }}" class="img-responsive" alt="wordcloud{{loop.index}}" width="600" height="400" vspace="30">
-            </div>
-      </a>
-    </div>
-    {% endif %}
-{% if count.append(count.pop() + 1) %}{% endif %}
-{% endfor %}
-
+      {% else %}
+      <div style="width: 45%; float:left">
+        <img src="{{  url_for('static', filename=img)  }}" class="img-responsive" alt="wordcloud{{loop.index}}" width="600" height="400" vspace="30">
+      </div>
+    </a>
+  </div>
+  {% endif %}
+  {% if count.append(count.pop() + 1) %}{% endif %}
+  {% endfor %}
 
   </div>
-
 
   </body>
 </html>

@@ -7,19 +7,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
 
+    <style>
+      body { padding-top: 70px; }
+    </style>
+
+  </head>
 
   <body>
 
-
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">Recap</a>
       </div>
       <ul class="nav navbar-nav">
-        <li><span class="navbar-text">{{ name }}</span></li>
+        <li class="active"><span class="navbar-text">{{ name }}</span></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="{{ url_for('logout') }}"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
