@@ -118,7 +118,7 @@ def generate_wordcloud(outputImgPath, inputText):
 # Method to generate a wordcloud from a text file containing extracted messages about a specific topic:
 #   Required Data: - Text file
 #   Output: - Filepath to the generated word cloud
-    
+
     #mode = os.stat(wordcloudImgPath)
 
     wordcloud = wc.WordCloud(font_path = '/System/Library/Fonts/HelveticaNeue.dfont',
@@ -127,7 +127,7 @@ def generate_wordcloud(outputImgPath, inputText):
         max_font_size=180, min_font_size=4, font_step=2, max_words=40, relative_scaling=0.3,
         regexp=None, collocations=True, random_state=None, mode="RGB",
         colormap=None, normalize_plurals=True)
-    
+
     try:
         wordcloud.generate(inputText)
         image = wordcloud.to_image()
@@ -178,10 +178,10 @@ def wordCloud(roomName):
         shutil.rmtree(wordcloudImgPath)
 
     os.makedirs(wordcloudImgPath)
-    
+
     #while not os.path.exists(wordcloudImgPath):
     #    time.sleep(0.01)
-    
+
     roomId = session['rooms_dict'].get(roomName)
     roomMessages = getMessages(roomId)
 
@@ -207,7 +207,6 @@ def wordCloud(roomName):
 
     #get messages from topics
     for i in range(0, numTopics):
-        print(str(i))
         topicKey = 'topic' + str(i)
         topics[i] = jsonTopics[topicKey]
         msgs[i] = str(topics[i]['messages'])
