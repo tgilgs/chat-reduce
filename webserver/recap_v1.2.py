@@ -6,7 +6,6 @@ import wordcloud as wc
 import re
 import shutil
 import random
-import time
 from PIL import Image, ImageDraw
 from io import BytesIO
 from extract_topics import cluster_topics
@@ -127,6 +126,7 @@ def generate_wordcloud(outputImgPath, inputText):
         image = wordcloud.to_image()
         image.save(outputImgPath, format="PNG")
     except ZeroDivisionError as e:
+        # Use error word cloud if there are not enough words:
         image = Image.open("static/errorWordCloud.png")
         image.save(outputImgPath, format="PNG")
         filepath = re.sub(r'static/', '', outputImgPath)
