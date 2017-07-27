@@ -3,6 +3,7 @@
   <head>
     <title>Recap - {{ room }}</title>
     <meta charset="utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -10,6 +11,21 @@
     <style>
       body { padding-top: 70px; }
     </style>
+
+    <!-- Script to refresh page once on load -->
+    <script>
+      $(document).ready(function(){
+        //Check if the current URL contains '#'
+        if(document.URL.indexOf("#")==-1) {
+          // Set the URL to whatever it was plus "#".
+          url = document.URL+"#";
+          location = "#";
+
+          //Reload the page
+          location.reload(true);
+        }
+      });
+    </script>
   </head>
 
   <body>
@@ -38,12 +54,14 @@
     <a href="{{ url_for('topicMessages', roomName = room, topic = count[0]) }}">
       {% if loop.index is divisibleby(2) %}
       <div style="width: 45%; float:right">
-        <img src="{{  url_for('static', filename=img)  }}" class="img-responsive" alt="wordcloud{{loop.index}}" width="600" height="400" vspace="30">
+        <!-- <img src="{{  url_for('static', filename=img)  }}" class="img-responsive" alt="wordcloud{{loop.index0}}" width="600" height="400" vspace="30"> -->
+        <img src="../static/{{ img }}?324132421342143252.123123" class="img-responsive" alt="wordcloud{{loop.index0}}" width="600" height="400" vspace="30">
       </div>
 
       {% else %}
       <div style="width: 45%; float:left">
-        <img src="{{  url_for('static', filename=img)  }}" class="img-responsive" alt="wordcloud{{loop.index}}" width="600" height="400" vspace="30">
+        <img src="../static/{{ img }}?324132421342143252.123123" class="img-responsive" alt="wordcloud{{loop.index0}}" width="600" height="400" vspace="30">
+        <!-- <img src="{{  url_for('static', filename=img)  }}" class="img-responsive" alt="wordcloud{{loop.index0}}" width="600" height="400" vspace="30"> -->
       </div>
     </a>
   </div>

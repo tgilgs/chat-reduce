@@ -4,20 +4,17 @@ import requests
 import os
 import wordcloud as wc
 import re
-import time
+import shutil
+import random
 from PIL import Image, ImageDraw
 from io import BytesIO
 from extract_topics import cluster_topics
-
-import shutil
 
 app = Flask(__name__)
 app.secret_key = os.environ['secret_key']
 
 client_id = os.environ['client_id']
 client_secret = os.environ['client_secret']
-
-wordcloudImgPath = "static/wordcloud_images"
 
 
 #######################################################################################
@@ -118,29 +115,26 @@ def generate_wordcloud(outputImgPath, inputText):
 # Method to generate a wordcloud from a text file containing extracted messages about a specific topic:
 #   Required Data: - Text file
 #   Output: - Filepath to the generated word cloud
-
-    #mode = os.stat(wordcloudImgPath)
-
     wordcloud = wc.WordCloud(font_path = '/System/Library/Fonts/HelveticaNeue.dfont',
         height = 400, width = 600, margin=2, background_color='white',
         ranks_only=None, prefer_horizontal=.9, mask=None, scale=1, color_func=None,
         max_font_size=180, min_font_size=4, font_step=2, max_words=40, relative_scaling=0.3,
         regexp=None, collocations=True, random_state=None, mode="RGB",
         colormap=None, normalize_plurals=True)
-
     try:
         wordcloud.generate(inputText)
         image = wordcloud.to_image()
         image.save(outputImgPath, format="PNG")
-
-        # Regular Expression method - search and replace pattern in output image path:
-        filename = re.sub(r'static/', '', outputImgPath)
-        return(filename)
-
-
     except ZeroDivisionError as e:
-        print("not enough words divided by zero!!!!")
-        return(None)
+        image = Image.open("static/errorWordCloud.png")
+        image.save(outputImgPath, format="PNG")
+        filepath = re.sub(r'static/', '', outputImgPath)
+        return(filepath)
+
+
+    # Regular Expression method - search and replace pattern in output image path:
+    filepath = re.sub(r'static/', '', outputImgPath)
+    return(filepath)
 
 
 
@@ -161,8 +155,8 @@ def logout():
 # Topic summary route:
 @app.route('/chat/<roomName>/<topic>')
 def topicMessages(roomName, topic):
-    topicNumber = 'topic'+str(topic)
-    topiclist = json.loads(open('clustered_topics.json').read())
+    topicNumber = ''.join(['topic', topic])
+    topiclist = json.load(open('clustered_topics.json'))
     topicMessage = topiclist[topicNumber]["messages"]
     # Reverse the message list:
     topicMessage = topicMessage[::-1]
@@ -170,53 +164,48 @@ def topicMessages(roomName, topic):
     return render_template("messages.html", name = session['displayName'], room = roomName, topic = ('Topic ' + str(topic)), topicMessage = topicMessage)
 
 
-# List of Rooms route
+# List of Rooms route:
 @app.route('/chat/<roomName>')
 def wordCloud(roomName):
+    # If topics are not clustered, sort messages into topics:
+    topicSession = session.get("topics", False)
+    if not topicSession:
+        roomId = session['rooms_dict'].get(roomName)
+        roomMessages = getMessages(roomId)
 
-    if os.path.exists(wordcloudImgPath):
-        shutil.rmtree(wordcloudImgPath)
+        with open ("room_messages.json", "w") as file1:
+            json.dump(roomMessages, file1)
 
-    os.makedirs(wordcloudImgPath)
+        # Process the messages into topics:
+        processed_data = cluster_topics("room_messages.json")
 
-    #while not os.path.exists(wordcloudImgPath):
-    #    time.sleep(0.01)
+        with open ("clustered_topics.json", "w") as file2:
+            json.dump(processed_data, file2)
+        # The messages have been clustered into topics:
+        session['topics'] = True
 
-    roomId = session['rooms_dict'].get(roomName)
-    roomMessages = getMessages(roomId)
+    # Process JSON, extract topics
+    jsonTopics = json.load(open('clustered_topics.json'))
 
-    with open ("room_messages.json", "w") as file1:
-        json.dump(roomMessages, file1)
+    # Count number of topics:
+    numTopics = len(jsonTopics)
 
-    processed_data = cluster_topics("room_messages.json")
+    topics = []
+    msgs = []
 
-    with open ("clustered_topics.json", "w") as file2:
-        json.dump(processed_data, file2)
-
-    #process JSON, extract topics
-    jsonTopics = json.loads(open('clustered_topics.json').read())
-
-    jsonTopicsStr = str(jsonTopics)
-
-    #count number of topics
-    matches = re.findall("('topic)\d+(':)", jsonTopicsStr)
-
-    numTopics = len(matches)
-    topics = [None] * numTopics
-    msgs = [None] * numTopics
-
-    #get messages from topics
+    # Get messages from topics:
     for i in range(0, numTopics):
         topicKey = 'topic' + str(i)
-        topics[i] = jsonTopics[topicKey]
-        msgs[i] = str(topics[i]['messages'])
+        topics.append(jsonTopics[topicKey])
+        msgs.append(str(topics[i]['messages']))
 
     filenames = []
-    #generate wordclouds
+    # Generate wordclouds:
     for i in range(0, numTopics):
-        filename = wordcloudImgPath + '/wordcloudimage' + str(i) + '.png'
+        fileLocation = 'wordcloud_images/wordcloud' + str(i) + '.png'
+        filename = 'static/' + fileLocation
         path = generate_wordcloud(filename, msgs[i])
-        filenames.append(path)
+        filenames.append(fileLocation)
 
     return render_template("wordClouds.html", room = roomName, name = session['displayName'], imageArr=filenames)
 
@@ -224,10 +213,20 @@ def wordCloud(roomName):
 # User page with a list of all the rooms and its users:
 @app.route('/main')
 def main():
+    # Sessions to tell server to re-process the messages for topics page:
+    session['topics'] = False
+
+    # Deleting the exisiting word cloud folder (delete all exisiting word clouds):
+    if os.path.exists("static/wordcloud_images"):
+        shutil.rmtree("static/wordcloud_images")
+    os.makedirs("static/wordcloud_images")
+
+    # Check if key exist for display name:
     displayName = session.get("displayName", False)
     if not displayName:
         return redirect(url_for('index'), code=302)
 
+    # Check if key exists for the room dictionary:
     roomSession = session.get("rooms_dict", False)
     if not roomSession:
         roomDict = listRooms()
