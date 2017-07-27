@@ -167,8 +167,8 @@ def topicMessages(roomName, topic):
 # List of Rooms route:
 @app.route('/chat/<roomName>')
 def wordCloud(roomName):
-    # If topics are not clustered, sort messages into topics:
-    topicSession = session.get("topics", False)
+    # If topics are not clustered and wordclouds are not generated, process messages into topics:
+    topicSession = session.get('topics', False)
     if not topicSession:
         roomId = session['rooms_dict'].get(roomName)
         roomMessages = getMessages(roomId)
@@ -181,33 +181,35 @@ def wordCloud(roomName):
 
         with open ("clustered_topics.json", "w") as file2:
             json.dump(processed_data, file2)
+
+        # Process JSON, extract topics
+        jsonTopics = json.load(open('clustered_topics.json'))
+
+        # Count number of topics:
+        numTopics = len(jsonTopics)
+
+        topics = []
+        msgs = []
+
+        # Get messages from topics:
+        for i in range(0, numTopics):
+            topicKey = 'topic' + str(i)
+            topics.append(jsonTopics[topicKey])
+            msgs.append(str(topics[i]['messages']))
+
+        filenames = []
+        # Generate wordclouds:
+        for i in range(0, numTopics):
+            fileLocation = 'wordcloud_images/wordcloud' + str(i) + '.png'
+            filename = 'static/' + fileLocation
+            path = generate_wordcloud(filename, msgs[i])
+            filenames.append(fileLocation)
+
         # The messages have been clustered into topics:
         session['topics'] = True
+        session['filenames'] = filenames
 
-    # Process JSON, extract topics
-    jsonTopics = json.load(open('clustered_topics.json'))
-
-    # Count number of topics:
-    numTopics = len(jsonTopics)
-
-    topics = []
-    msgs = []
-
-    # Get messages from topics:
-    for i in range(0, numTopics):
-        topicKey = 'topic' + str(i)
-        topics.append(jsonTopics[topicKey])
-        msgs.append(str(topics[i]['messages']))
-
-    filenames = []
-    # Generate wordclouds:
-    for i in range(0, numTopics):
-        fileLocation = 'wordcloud_images/wordcloud' + str(i) + '.png'
-        filename = 'static/' + fileLocation
-        path = generate_wordcloud(filename, msgs[i])
-        filenames.append(fileLocation)
-
-    return render_template("wordClouds.html", room = roomName, name = session['displayName'], imageArr=filenames)
+    return render_template("wordClouds.html", room = roomName, name = session['displayName'], imageArr=session['filenames'])
 
 
 # User page with a list of all the rooms and its users:
@@ -215,6 +217,7 @@ def wordCloud(roomName):
 def main():
     # Sessions to tell server to re-process the messages for topics page:
     session['topics'] = False
+    session['filenames'] = False
 
     # Deleting the exisiting word cloud folder (delete all exisiting word clouds):
     if os.path.exists("static/wordcloud_images"):
