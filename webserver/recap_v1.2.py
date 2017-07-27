@@ -6,6 +6,7 @@ import wordcloud as wc
 import re
 import shutil
 import random
+import time
 from PIL import Image, ImageDraw
 from io import BytesIO
 from extract_topics import cluster_topics
@@ -134,6 +135,7 @@ def generate_wordcloud(outputImgPath, inputText):
 
     # Regular Expression method - search and replace pattern in output image path:
     filepath = re.sub(r'static/', '', outputImgPath)
+
     return(filepath)
 
 
@@ -202,7 +204,7 @@ def wordCloud(roomName):
     filenames = []
     # Generate wordclouds:
     for i in range(0, numTopics):
-        fileLocation = 'wordcloud_images/wordcloud' + str(i) + '.png'
+        fileLocation = 'wordcloud_images/wordcloud' + str(i) + str(time.clock()) +'.png'
         filename = 'static/' + fileLocation
         path = generate_wordcloud(filename, msgs[i])
         filenames.append(fileLocation)
