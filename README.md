@@ -30,7 +30,7 @@ You are now working within the virtual environment
 4. Install packages to the virtual environment:
 
 ```
-pip install flask Pillow wordcloud nltk numpy scipy sklearn
+pip install flask Pillow wordcloud nltk numpy scipy sklearn requests
 ```
 
 For nltk, you also need to run ```dependencies.py``` to download the models.
